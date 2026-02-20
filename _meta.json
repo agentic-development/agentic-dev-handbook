@@ -1,0 +1,14 @@
+{
+  "chapters": [
+    {
+      "slug": "introduction",
+      "title": "Introduction",
+      "description": "What is Agentic Development and why it matters"
+    },
+    {
+      "slug": "getting-started",
+      "title": "Getting Started",
+      "description": "Set up your environment and complete your first agentic workflow"
+    }
+  ]
+}
