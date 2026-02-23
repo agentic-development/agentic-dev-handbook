@@ -9,6 +9,31 @@
       "slug": "getting-started",
       "title": "Getting Started",
       "description": "Set up your environment and complete your first agentic workflow"
+    },
+    {
+      "slug": "foundations",
+      "title": "Foundations",
+      "description": "What is Agentic AI and its building blocks"
+    },
+    {
+      "slug": "framework",
+      "title": "The Agentic Development Framework",
+      "description": "The orchestration layer, core pillars, and the evolution from Agile to Agentic"
+    },
+    {
+      "slug": "team-model",
+      "title": "Team Model",
+      "description": "The Hybrid Squad structure and role definitions for agentic teams"
+    },
+    {
+      "slug": "infrastructure",
+      "title": "Operational Infrastructure",
+      "description": "The Agent Workbench, context management, and evaluation harness"
+    },
+    {
+      "slug": "operations",
+      "title": "Operations",
+      "description": "Governance routines, ceremonies, and metrics for agentic teams"
     }
   ]
 }
