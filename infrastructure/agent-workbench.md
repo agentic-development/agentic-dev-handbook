@@ -12,14 +12,14 @@ The Agent Workbench is the isolated, secure, disposable execution environment wh
 
 ## The Workbench
 
-An Agent Workbench is an ephemeral microVM provisioned on demand for a single agent task. It contains everything the agent needs -- a clean copy of the relevant codebase, pre-installed dependencies, configured tools, and the context slice defined by the task's Live Spec -- and nothing it does not.
+An Agent Workbench is an ephemeral microVM provisioned on demand for a single agent task. It contains everything the agent needs —a clean copy of the relevant codebase, pre-installed dependencies, configured tools, and the context slice defined by the task's Live Spec —and nothing it does not.
 
 ### Lifecycle
 
-1. **Provisioning** -- When a task is dispatched, the platform spins up a fresh microVM in seconds. The workbench is pre-loaded with the codebase snapshot, relevant context from the Context Index, and the tools specified in the task configuration.
-2. **Execution** -- The agent operates within the workbench: reading files, running commands, calling APIs, and producing artifacts. All actions are sandboxed -- the agent cannot reach production systems, other agents' workbenches, or shared infrastructure.
-3. **Artifact extraction** -- When the agent signals completion (or the execution times out), the platform extracts outputs: code changes, test results, logs, and evaluation traces.
-4. **Teardown** -- The workbench is destroyed. No state persists. No credentials linger. The next task starts from a clean slate.
+1. **Provisioning** —When a task is dispatched, the platform spins up a fresh microVM in seconds. The workbench is pre-loaded with the codebase snapshot, relevant context from the Context Index, and the tools specified in the task configuration.
+2. **Execution** —The agent operates within the workbench: reading files, running commands, calling APIs, and producing artifacts. All actions are sandboxed —the agent cannot reach production systems, other agents' workbenches, or shared infrastructure.
+3. **Artifact extraction** —When the agent signals completion (or the execution times out), the platform extracts outputs: code changes, test results, logs, and evaluation traces.
+4. **Teardown** —The workbench is destroyed. No state persists. No credentials linger. The next task starts from a clean slate.
 
 This lifecycle eliminates an entire class of operational risks. Agents cannot accumulate stale state, leak secrets across tasks, or create persistent side effects that corrupt future executions.
 
@@ -27,10 +27,10 @@ This lifecycle eliminates an entire class of operational risks. Agents cannot ac
 
 Each workbench provides:
 
-- **Filesystem isolation** -- The agent sees only its own workspace. It cannot read or write files outside its designated directories.
-- **Network isolation** -- Outbound network access is restricted to an explicit allowlist: approved package registries, documentation sources, and API endpoints. All other egress is blocked by default.
-- **Process isolation** -- Agent processes run in their own namespace. They cannot observe or interact with processes from other workbenches or the host system.
-- **Resource limits** -- CPU, memory, and execution time are bounded. A runaway agent cannot consume unbounded resources or run indefinitely.
+- **Filesystem isolation** —The agent sees only its own workspace. It cannot read or write files outside its designated directories.
+- **Network isolation** —Outbound network access is restricted to an explicit allowlist: approved package registries, documentation sources, and API endpoints. All other egress is blocked by default.
+- **Process isolation** —Agent processes run in their own namespace. They cannot observe or interact with processes from other workbenches or the host system.
+- **Resource limits** —CPU, memory, and execution time are bounded. A runaway agent cannot consume unbounded resources or run indefinitely.
 
 ## Security by Design
 
@@ -38,7 +38,7 @@ Ephemeral infrastructure makes security a structural property of the system rath
 
 ### Blast Radius Containment
 
-If an agent does something wrong -- misinterprets a spec, writes a destructive command, or falls victim to a [[prompt-injection]] attack -- the damage is contained within a disposable environment. The worst case is a wasted workbench execution, not a corrupted production database.
+If an agent does something wrong —misinterprets a spec, writes a destructive command, or falls victim to a [[prompt-injection]] attack —the damage is contained within a disposable environment. The worst case is a wasted workbench execution, not a corrupted production database.
 
 ### Secret Management
 
@@ -46,7 +46,7 @@ Secrets and credentials are injected into the workbench at runtime through a sec
 
 ### Secret Redaction
 
-All workbench output -- logs, terminal output, generated code -- passes through a redaction layer before leaving the sandbox. This layer automatically detects and masks:
+All workbench output —logs, terminal output, generated code —passes through a redaction layer before leaving the sandbox. This layer automatically detects and masks:
 
 - API keys and tokens
 - Database connection strings
@@ -74,30 +74,30 @@ Agents are only as capable as the tools they can invoke. The Enterprise Tool Reg
 
 The registry contains tools across several categories:
 
-- **API wrappers** -- Pre-configured clients for internal services, third-party APIs, and cloud provider resources. Each wrapper handles authentication, rate limiting, and error handling so the agent does not need to.
-- **[[mcp|MCP]] integrations** -- Connections to Model Context Protocol servers that expose structured capabilities: database queries, file system operations, search, and more. MCP provides a standardized interface that models can invoke reliably.
-- **Infrastructure-as-Code modules** -- Terraform modules, CloudFormation templates, and Kubernetes manifests that agents can apply through controlled execution paths. These modules are pre-approved and tested, ensuring agents provision infrastructure safely.
-- **Development tools** -- Linters, formatters, test runners, build tools, and static analysis utilities. These are the same tools your human engineers use, packaged for agent invocation.
-- **Observability tools** -- Log queriers, metric dashboards, and trace explorers that agents can use to diagnose issues and validate their own work.
+- **API wrappers** —Pre-configured clients for internal services, third-party APIs, and cloud provider resources. Each wrapper handles authentication, rate limiting, and error handling so the agent does not need to.
+- **[[mcp|MCP]] integrations** —Connections to Model Context Protocol servers that expose structured capabilities: database queries, file system operations, search, and more. MCP provides a standardized interface that models can invoke reliably.
+- **Infrastructure-as-Code modules** —Terraform modules, CloudFormation templates, and Kubernetes manifests that agents can apply through controlled execution paths. These modules are pre-approved and tested, ensuring agents provision infrastructure safely.
+- **Development tools** —Linters, formatters, test runners, build tools, and static analysis utilities. These are the same tools your human engineers use, packaged for agent invocation.
+- **Observability tools** —Log queriers, metric dashboards, and trace explorers that agents can use to diagnose issues and validate their own work.
 
 ### JSON Function Definitions
 
-Every tool in the registry is wrapped in a JSON Function Definition -- a structured schema that tells the LLM exactly how to invoke the tool. A function definition includes:
+Every tool in the registry is wrapped in a JSON Function Definition —a structured schema that tells the LLM exactly how to invoke the tool. A function definition includes:
 
-- **Name and description** -- What the tool does, expressed in natural language that helps the model decide when to use it.
-- **Parameter schema** -- A JSON Schema defining the inputs the tool accepts, including types, constraints, required fields, and default values.
-- **Return schema** -- What the tool returns on success and on failure.
-- **Side effects declaration** -- Whether the tool is read-only or performs mutations. This helps the governance layer determine which invocations require additional approval.
+- **Name and description** —What the tool does, expressed in natural language that helps the model decide when to use it.
+- **Parameter schema** —A JSON Schema defining the inputs the tool accepts, including types, constraints, required fields, and default values.
+- **Return schema** —What the tool returns on success and on failure.
+- **Side effects declaration** —Whether the tool is read-only or performs mutations. This helps the governance layer determine which invocations require additional approval.
 
-Well-crafted function definitions are the difference between agents that use tools reliably and agents that hallucinate tool calls. The definition is the contract between the model and the tool -- ambiguity in the definition leads to ambiguity in usage.
+Well-crafted function definitions are the difference between agents that use tools reliably and agents that hallucinate tool calls. The definition is the contract between the model and the tool —ambiguity in the definition leads to ambiguity in usage.
 
 ### [[tool-calling|Tool Calling]] Governance
 
 Not all tools carry the same risk. The registry supports tiered governance:
 
-- **Unrestricted tools** -- Read-only operations like file reads, search queries, and documentation lookups. Agents can invoke these freely.
-- **Monitored tools** -- Operations with limited side effects like writing files or running tests. These are logged and auditable but do not require pre-approval.
-- **Gated tools** -- High-impact operations like deploying infrastructure, modifying access controls, or calling external payment APIs. These require explicit approval through a [[guardrails]] checkpoint before execution proceeds.
+- **Unrestricted tools** —Read-only operations like file reads, search queries, and documentation lookups. Agents can invoke these freely.
+- **Monitored tools** —Operations with limited side effects like writing files or running tests. These are logged and auditable but do not require pre-approval.
+- **Gated tools** —High-impact operations like deploying infrastructure, modifying access controls, or calling external payment APIs. These require explicit approval through a [[guardrails]] checkpoint before execution proceeds.
 
 This tiered model prevents over-restricting agents (which kills productivity) while maintaining control over genuinely risky operations.
 
@@ -146,4 +146,4 @@ Most organizations start with SaaS or VPC deployment and migrate to on-premises 
 
 The Agent Workbench is the execution layer that makes everything else in the Agentic Development Framework possible. Without isolated, ephemeral environments, autonomous agent execution would be an unacceptable security risk. Without a governed tool registry, agents would lack the capabilities to do useful work. Without flexible deployment options, organizations could not adopt agentic workflows within their existing compliance constraints.
 
-The workbench does not operate in isolation. It receives its instructions from the Context Index and Live Specs (covered in the next page), and its output is validated by the Evaluation Harness before any human sees it. Together, these three components -- workbench, context, and evaluation -- form the operational infrastructure of agentic development.
+The workbench does not operate in isolation. It receives its instructions from the Context Index and Live Specs (covered in the next page), and its output is validated by the Evaluation Harness before any human sees it. Together, these three components —workbench, context, and evaluation —form the operational infrastructure of agentic development.

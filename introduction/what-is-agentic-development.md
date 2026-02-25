@@ -1,8 +1,9 @@
 ---
 title: "What is Agentic Development?"
 description: "An introduction to AI-assisted software development where AI agents actively participate in the development process"
-authors: ["dpavancini"]
-lastUpdated: 2026-02-19
+authors:
+  - dpavancini
+lastUpdated: "2026-02-19"
 ---
 
 ## Defining Agentic Development
@@ -18,7 +19,7 @@ Unlike traditional AI-assisted coding (autocomplete, snippet generation), agenti
 
 ## The Spectrum of AI Assistance
 
-Think of AI assistance as a spectrum:
+AI assistance exists on a spectrum:
 
 1. **Code Completion** — Suggesting the next line of code
 2. **Code Generation** — Writing functions from descriptions
@@ -38,7 +39,7 @@ Several converging trends make agentic development practical today:
 
 ## What This Means for Developers
 
-Agentic development doesn't replace developers — it amplifies them. Developers shift from writing every line of code to:
+Agentic development does not replace developers — it amplifies them. Developers shift from writing every line of code to:
 
 - Defining specifications and acceptance criteria
 - Reviewing and guiding AI-generated implementations

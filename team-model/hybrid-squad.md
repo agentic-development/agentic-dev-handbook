@@ -24,9 +24,9 @@ The Agent Fleet handles high-volume execution: writing implementation code, runn
 
 This is not about replacing developers. It is about recognizing that [[agentic-workflows]] change where human judgment creates the most value. A senior engineer reviewing 20 agent-generated pull requests per day delivers more impact than that same engineer writing 2 pull requests by hand.
 
-## AI Agents as Synthetic Team Members
+## AI Agents as Managed Executors
 
-In a Hybrid Squad, AI agents are not tools you invoke — they are synthetic team members. They are granted system permissions, assigned tasks through the backlog, and subjected to performance reviews just like any contributor.
+In a Hybrid Squad, AI agents are not ad-hoc tools you invoke — they are managed executors with defined responsibilities. They are granted system permissions, assigned tasks through the backlog, and subjected to performance tracking just like any contributor.
 
 This framing matters because it changes how you manage quality. Instead of asking "did the tool produce correct output?" you ask "is this team member meeting its performance standards?" Agent performance is tracked through metrics like:
 
@@ -41,7 +41,7 @@ The human side of a Hybrid Squad consists of three roles. Each concentrates on a
 
 ### Principal Systems Architect
 
-Think of this role as the "City Planner" of the codebase. The Principal Systems Architect does not write most of the code — they define the laws that govern how code gets written.
+The Principal Systems Architect owns the structural integrity of the codebase. They do not write most of the code — they define the architectural rules that govern how code gets written.
 
 Core responsibilities:
 

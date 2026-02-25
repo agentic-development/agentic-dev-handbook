@@ -1,13 +1,14 @@
 ---
 title: "Why Agentic Development Matters"
 description: "The impact of agentic development on software teams, productivity, and the future of engineering"
-authors: ["dpavancini"]
-lastUpdated: 2026-02-19
+authors:
+  - dpavancini
+lastUpdated: "2026-02-19"
 ---
 
 ## The Productivity Multiplier
 
-Agentic development represents a fundamental shift in how software gets built. Teams adopting agentic workflows report significant improvements in:
+Agentic development changes how software gets built. Teams adopting agentic workflows report significant improvements in:
 
 - **Development velocity** — Routine implementation tasks complete in minutes instead of hours
 - **Code consistency** — AI agents follow established patterns and conventions reliably
@@ -16,11 +17,11 @@ Agentic development represents a fundamental shift in how software gets built. T
 
 ## Beyond Individual Productivity
 
-The real impact isn't just faster coding. Agentic development changes the economics of software:
+The real impact is not just faster coding. Agentic development changes the economics of software:
 
 ### Smaller Teams, Bigger Ambitions
 
-When AI handles routine implementation, a team of 3 can deliver what previously required 10. This doesn't mean fewer jobs — it means more ambitious projects become feasible.
+When AI handles routine implementation, a team of 3 can deliver what previously required 10. This does not mean fewer jobs — it means more ambitious projects become feasible.
 
 ### Quality by Default
 

@@ -1,8 +1,9 @@
 ---
 title: "How to Use This Handbook"
 description: "A guide to navigating the handbook and getting the most out of its content"
-authors: ["dpavancini"]
-lastUpdated: 2026-02-19
+authors:
+  - dpavancini
+lastUpdated: "2026-02-24"
 ---
 
 ## Structure
@@ -11,8 +12,11 @@ This handbook is organized into chapters that build on each other, but each chap
 
 1. **Introduction** (you are here) — What agentic development is and why it matters
 2. **Getting Started** — Setting up your environment and running your first agentic workflow
-
-More chapters will be added as the field evolves.
+3. **Foundations** — Agentic AI building blocks and multi-agent systems
+4. **The Agentic Development Framework** — The orchestration layer, core pillars, and the evolution from Agile to Agentic
+5. **Team Model** — The Hybrid Squad structure, role definitions, and talent development
+6. **Operational Infrastructure** — The Agent Workbench, context management, and evaluation harness
+7. **Operations** — Governance routines, ceremonies, metrics, and an end-to-end case study
 
 ## How to Read
 

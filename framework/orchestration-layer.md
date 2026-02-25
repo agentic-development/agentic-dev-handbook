@@ -76,10 +76,10 @@ If all checks pass, the work moves to the Validation Gate. If the agent encounte
 
 When an agent raises a Blocker Flag, the Agent Operator intervenes in what is called a "Rescue Mission." The operator diagnoses the issue, which typically falls into one of these categories:
 
-- **Ambiguous spec** -- the intent was unclear or incomplete
-- **Missing context** -- the agent lacked information it needed
-- **Novel problem** -- no existing pattern covers this scenario
-- **Constraint conflict** -- requirements contradict each other
+- **Ambiguous spec** —the intent was unclear or incomplete
+- **Missing context** —the agent lacked information it needed
+- **Novel problem** —no existing pattern covers this scenario
+- **Constraint conflict** —requirements contradict each other
 
 The operator resolves the blocker, updates the Context Index with the new knowledge, and returns the task to the Orchestration System. This creates a feedback loop: every intervention makes the system smarter and reduces future escalations.
 
@@ -87,9 +87,9 @@ The operator resolves the blocker, updates the Context Index with the new knowle
 
 Completed work passes through a Technical Review that evaluates:
 
-- **Security** -- no new vulnerabilities, secrets properly handled, access controls intact
-- **Maintainability** -- code follows established patterns, is well-documented, and is testable
-- **Architectural fit** -- changes align with system architecture and do not introduce unintended coupling
+- **Security** —no new vulnerabilities, secrets properly handled, access controls intact
+- **Maintainability** —code follows established patterns, is well-documented, and is testable
+- **Architectural fit** —changes align with system architecture and do not introduce unintended coupling
 
 The Context Architect performs final acceptance, confirming that the implementation satisfies the original business intent.
 
@@ -100,8 +100,8 @@ The following diagram illustrates how work flows through the four phases, with t
 ```mermaid
 graph TD
     A[Context Architect: Live Spec] -->|1. Spec Injection| B(Orchestration System)
-    B -->|Low Risk| C[Auto-Agent: Synthetic Attempt]
-    B -->|High Risk / Ambiguity| D[Assisted-Agent: Synthetic Attempt]
+    B -->|Low Risk| C[Auto-Agent: Autonomous Execution]
+    B -->|High Risk / Ambiguity| D[Assisted-Agent: Autonomous Execution]
     C -->|Success| E[Validation Gate]
     D -->|Success| E
     C -->|Blocker Flag| F[Agent Operator: Intervention]
@@ -116,9 +116,9 @@ This flow creates a self-improving system. Each cycle through the escalation lad
 
 Underlying the Triangular Workflow is a continuous feedback loop that drives improvement across every iteration:
 
-1. **Context** -- The Context Architect provides structured knowledge (Live Specs, Context Index) that defines what needs to happen and why.
-2. **Decision** -- The Agent (or Agent Operator, when escalated) makes tactical decisions about how to implement the intent within the given constraints.
-3. **Learning** -- Every execution, whether successful or escalated, generates new knowledge that feeds back into the Context Index, refining future context and reducing ambiguity.
+1. **Context** —The Context Architect provides structured knowledge (Live Specs, Context Index) that defines what needs to happen and why.
+2. **Decision** —The Agent (or Agent Operator, when escalated) makes tactical decisions about how to implement the intent within the given constraints.
+3. **Learning** —Every execution, whether successful or escalated, generates new knowledge that feeds back into the Context Index, refining future context and reducing ambiguity.
 
 This cycle means the system gets progressively better at autonomous execution. Early on, many tasks escalate to the Agent Operator. Over time, as context accumulates and specs become more precise, the proportion of fully autonomous executions increases.
 

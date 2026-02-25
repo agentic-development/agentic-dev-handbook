@@ -8,7 +8,7 @@ lastUpdated: "2026-02-23"
 
 ## Overview
 
-Agile was a paradigm shift that moved software development from rigid, plan-driven processes to iterative, people-centric delivery. [[agentic-engineering|Agentic Development]] is the next evolution, preserving Agile's emphasis on feedback and adaptability while fundamentally changing what constrains delivery, who (or what) does the work, and how quality is assured.
+Agile moved software development from rigid, plan-driven processes to iterative, people-centric delivery. [[agentic-engineering|Agentic Development]] is the next evolution, preserving Agile's emphasis on feedback and adaptability while fundamentally changing what constrains delivery, who (or what) does the work, and how quality is assured.
 
 ## Why Agile Alone Is Not Enough
 
@@ -20,7 +20,7 @@ The core tensions:
 - **User stories assume human interpretation.** "As a user, I want..." relies on a developer's judgment to fill in gaps. Agents need machine-readable precision, not narrative flexibility.
 - **Manual code review does not scale.** When agents produce code at volume, human reviewers become the bottleneck. Automated evaluation must handle the bulk of quality assurance.
 
-Agentic development does not abandon Agile -- it evolves it. The values of customer collaboration, responding to change, and working software over documentation remain. The practices change to match a new execution model.
+Agentic development does not abandon Agile —it evolves it. The values of customer collaboration, responding to change, and working software over documentation remain. The practices change to match a new execution model.
 
 ## Key Differences
 
@@ -52,7 +52,7 @@ Agile positions developers as craftspeople who write code, participate in ceremo
 - **Agent Operators** oversee execution and intervene on exceptions, rather than handling every task personally
 - **Technical Reviewers** validate architectural fit and security, rather than reviewing every line of code
 
-This does not mean less skill is required. Directing agents effectively demands deep technical understanding -- you need to know what good looks like to specify it precisely and validate it efficiently.
+This does not mean less skill is required. Directing agents effectively demands deep technical understanding —you need to know what good looks like to specify it precisely and validate it efficiently.
 
 ### Ephemeral Infrastructure
 
@@ -92,7 +92,7 @@ The Continuous Development Loop (CDL) extends CI/CD to cover the full agentic li
 
 Three capabilities distinguish CDL from traditional CI/CD:
 
-1. **Security as a continuous thread.** Rather than a separate security review stage, security checks run at every phase -- from spec validation through execution to deployment. This catches security issues at the point of introduction rather than after the fact.
+1. **Security as a continuous thread.** Rather than a separate security review stage, security checks run at every phase —from spec validation through execution to deployment. This catches security issues at the point of introduction rather than after the fact.
 
 2. **The Eval Harness replaces CI as the primary quality gate.** Traditional CI runs unit tests and linters. The Eval Harness runs behavioral verification, architectural conformance checks, performance baselines, and security scans as a unified evaluation suite.
 
@@ -106,13 +106,13 @@ The transition from Agile to Agentic is enabled by a rapid evolution in AI codin
 
 The trajectory of AI coding tools follows a clear progression:
 
-1. **Code completion** (2021-2023) -- Autocomplete on steroids. GitHub Copilot, TabNine, and others suggest the next line or block of code. The human remains in full control.
+1. **Code completion** (2021-2023) —Inline code suggestion tools. GitHub Copilot, TabNine, and others suggest the next line or block of code. The human remains in full control.
 
-2. **Interactive assistants** (2023-2024) -- Chat-based interfaces like ChatGPT, Claude, and Cursor's composer mode. Developers describe what they want in natural language and iterate on the output. Still human-driven, but higher leverage.
+2. **Interactive assistants** (2023-2024) —Chat-based interfaces like ChatGPT, Claude, and Cursor's composer mode. Developers describe what they want in natural language and iterate on the output. Still human-driven, but higher leverage.
 
-3. **Coding agents** (2024-2025) -- Tools like Claude Code, GitHub Copilot agent mode, and Cursor's background agents that can plan multi-step implementations, execute them across files, run tests, and iterate on failures. The human defines the task; the agent handles execution.
+3. **Coding agents** (2024-2025) —Tools like Claude Code, GitHub Copilot agent mode, and Cursor's background agents that can plan multi-step implementations, execute them across files, run tests, and iterate on failures. The human defines the task; the agent handles execution.
 
-4. **Autonomous teams** (2025-present) -- Multi-agent systems where specialized agents handle different aspects of development (planning, implementation, testing, review) with human oversight at strategic checkpoints. This is where [[vibe-coding]] evolves from a solo activity into an orchestrated workflow.
+4. **Autonomous teams** (2025-present) —Multi-agent systems where specialized agents handle different aspects of development (planning, implementation, testing, review) with human oversight at strategic checkpoints. This is where [[vibe-coding]] evolves from a solo activity into an orchestrated workflow.
 
 ### Generalist Agent Capabilities
 
@@ -126,7 +126,7 @@ Modern coding agents are generalists. A single agent can:
 - Interact with development tools (Git, package managers, build systems, APIs)
 - Follow project-specific conventions defined in context files
 
-This generalist capability is what makes the [[software-factory]] model viable. You do not need a different tool for each task -- a single, well-contextualized agent can handle the full range of development work within its competence boundary.
+This generalist capability is what makes the [[software-factory]] model viable. You do not need a different tool for each task —a single, well-contextualized agent can handle the full range of development work within its competence boundary.
 
 ### Platform Comparison
 
@@ -159,4 +159,4 @@ The goal is not to replace Agile ceremonies overnight. It is to evolve them incr
 
 ## Next Steps
 
-With the framework defined, the next chapter covers the [Team Model](/en/handbook/team-model) -- how to structure roles, skills, and responsibilities in an agentic development organization.
+With the framework defined, the next chapter covers the [Team Model](/en/handbook/team-model) —how to structure roles, skills, and responsibilities in an agentic development organization.

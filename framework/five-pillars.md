@@ -12,30 +12,30 @@ The Agentic Development Framework rests on four architectural pillars that work 
 
 ## Pillar 1: Context-First Architecture
 
-[[context-engineering|Context Engineering]] is the foundation of everything else. In agentic development, context is code -- it is the primary input that determines the quality, correctness, and speed of every agent execution.
+[[context-engineering|Context Engineering]] is the foundation of everything else. In agentic development, context is code —it is the primary input that determines the quality, correctness, and speed of every agent execution.
 
 ### Context Clarity as the Primary Constraint
 
 Traditional development is constrained by developer time. Agentic development is constrained by context clarity. When agents have precise, complete, and well-structured context, they execute reliably and fast. When context is vague or incomplete, they produce hallucinations, miss edge cases, or loop unproductively.
 
-This means the [[context-window]] is not just a technical limitation of language models -- it is an architectural constraint that shapes how you decompose work, structure specifications, and organize knowledge.
+This means the [[context-window]] is not just a technical limitation of language models —it is an architectural constraint that shapes how you decompose work, structure specifications, and organize knowledge.
 
 ### The Context Index
 
 The Context Index is the structured knowledge base that agents draw from during execution. It includes:
 
-- **Live Specs** -- Machine-readable specifications for current work items
-- **System Constitution** -- Architectural principles, coding standards, security policies
-- **Codebase context** -- Type definitions, API schemas, test suites, documentation
-- **Historical context** -- Past decisions, resolved blockers, lessons learned
+- **Live Specs** —Machine-readable specifications for current work items
+- **System Constitution** —Architectural principles, coding standards, security policies
+- **Codebase context** —Type definitions, API schemas, test suites, documentation
+- **Historical context** —Past decisions, resolved blockers, lessons learned
 
-Think of the Context Index as the agent's institutional memory. The richer and more structured it is, the more autonomously the agent can operate.
+The Context Index serves as the agent's persistent knowledge base. The richer and more structured it is, the more autonomously the agent can operate.
 
 Organizations that adopt [[rag|RAG]] patterns to surface relevant context dynamically can further reduce the burden on the Context Architect and increase the proportion of tasks that agents handle autonomously.
 
 ## Pillar 2: Ephemeral Infrastructure
 
-Every agent execution happens inside an Ephemeral Workbench -- an isolated, secure, disposable environment that contains everything the agent needs and nothing it does not.
+Every agent execution happens inside an Ephemeral Workbench —an isolated, secure, disposable environment that contains everything the agent needs and nothing it does not.
 
 ### Workbenches as Isolated MicroVMs
 
@@ -52,10 +52,10 @@ This model eliminates an entire class of risks: agents cannot accidentally corru
 
 Ephemeral infrastructure makes security a structural property rather than a policy overlay:
 
-- **Blast radius containment** -- If an agent does something wrong, the damage is limited to a disposable environment
-- **No persistent access** -- Agents never hold long-lived credentials or sessions
-- **Auditable by default** -- Every workbench execution produces a complete, reproducible log
-- **[[prompt-injection]] resistance** -- Isolated environments limit what an attacker can achieve even if they compromise an agent's input
+- **Blast radius containment** —If an agent does something wrong, the damage is limited to a disposable environment
+- **No persistent access** —Agents never hold long-lived credentials or sessions
+- **Auditable by default** —Every workbench execution produces a complete, reproducible log
+- **[[prompt-injection]] resistance** —Isolated environments limit what an attacker can achieve even if they compromise an agent's input
 
 ## Pillar 3: Gate-Based Governance
 
@@ -65,10 +65,10 @@ Agentic development replaces informal code review with a structured system of au
 
 These gates run on every agent execution without human involvement:
 
-- **Security scans** -- Static analysis, dependency vulnerability checks, secret detection
-- **Eval Harness** -- The spec-defined acceptance criteria, executed as automated tests
-- **Architectural conformance** -- Checks that changes follow established patterns and do not introduce forbidden dependencies
-- **Performance baselines** -- Automated benchmarks that catch regressions
+- **Security scans** —Static analysis, dependency vulnerability checks, secret detection
+- **Eval Harness** —The spec-defined acceptance criteria, executed as automated tests
+- **Architectural conformance** —Checks that changes follow established patterns and do not introduce forbidden dependencies
+- **Performance baselines** —Automated benchmarks that catch regressions
 
 The Eval Harness is the centerpiece. It transforms acceptance criteria from a document that humans read into executable checks that agents must pass. This is the mechanism that makes autonomous execution trustworthy.
 
@@ -76,16 +76,16 @@ The Eval Harness is the centerpiece. It transforms acceptance criteria from a do
 
 Some decisions are too consequential for full automation. Mandatory human-in-the-loop gates include:
 
-- **Security-critical changes** -- Authentication flows, authorization logic, data encryption
-- **Architectural decisions** -- New service boundaries, database schema changes, API contracts
-- **High-blast-radius deployments** -- Changes that affect all users or critical infrastructure
-- **Novel patterns** -- First-time implementations of approaches not covered by existing specs
+- **Security-critical changes** —Authentication flows, authorization logic, data encryption
+- **Architectural decisions** —New service boundaries, database schema changes, API contracts
+- **High-blast-radius deployments** —Changes that affect all users or critical infrastructure
+- **Novel patterns** —First-time implementations of approaches not covered by existing specs
 
 The key insight is that [[hallucination]] risk is not uniform across all tasks. Gate-Based Governance allocates human attention where it matters most, rather than spreading it thinly across everything.
 
 ## Pillar 4: Hybrid Engineering
 
-Hybrid Engineering is the practice of routing each task to the most efficient resource -- whether that is an autonomous agent, an assisted agent, or a human engineer.
+Hybrid Engineering is the practice of routing each task to the most efficient resource —whether that is an autonomous agent, an assisted agent, or a human engineer.
 
 ### Auto-Agents for Standard Tasks
 
@@ -109,10 +109,10 @@ Tasks that involve high ambiguity, novel architecture, or significant judgment c
 
 The Orchestration System routes tasks based on a combination of factors:
 
-- **Spec completeness** -- How well-defined are the acceptance criteria?
-- **Pattern coverage** -- Does the Context Index contain relevant precedents?
-- **Blast radius** -- What is the potential impact of a wrong implementation?
-- **Novelty** -- Is this a variation of a known pattern or something entirely new?
+- **Spec completeness** —How well-defined are the acceptance criteria?
+- **Pattern coverage** —Does the Context Index contain relevant precedents?
+- **Blast radius** —What is the potential impact of a wrong implementation?
+- **Novelty** —Is this a variation of a known pattern or something entirely new?
 
 Over time, as the Context Index grows and specs become more precise, the proportion of auto-agent tasks increases. This is how agentic teams scale: not by hiring more engineers, but by expanding the boundary of what agents can handle autonomously.
 
@@ -134,29 +134,29 @@ Unlike a user story ("As a user, I want..."), a spec leaves no room for interpre
 
 Every Live Spec must contain at least three assets:
 
-1. **Behavioral Contract** -- A precise description of the expected behavior, including inputs, outputs, edge cases, and error handling. This is what the agent implements.
+1. **Behavioral Contract** —A precise description of the expected behavior, including inputs, outputs, edge cases, and error handling. This is what the agent implements.
 
-2. **System Constitution** -- The [[system-prompt]] and constraints that govern how the agent operates. This includes coding standards, architectural patterns, security policies, and any domain-specific rules. It defines the boundaries of acceptable solutions.
+2. **System Constitution** —The [[system-prompt]] and constraints that govern how the agent operates. This includes coding standards, architectural patterns, security policies, and any domain-specific rules. It defines the boundaries of acceptable solutions.
 
-3. **Actionable Task Map** -- A decomposed, ordered list of implementation steps that the agent can follow. Each step references the relevant section of the Behavioral Contract and includes its own acceptance criteria.
+3. **Actionable Task Map** —A decomposed, ordered list of implementation steps that the agent can follow. Each step references the relevant section of the Behavioral Contract and includes its own acceptance criteria.
 
 ### Similarities to TDD
 
 Spec-Driven Development shares DNA with Test-Driven Development (TDD). Both approaches define the expected behavior before writing the implementation. The key differences:
 
-- **Scope** -- TDD specs are function-level; Live Specs cover entire features or workflows
-- **Audience** -- TDD tests are written for test runners; Live Specs are written for agents and humans
-- **Richness** -- Live Specs include architectural context, rationale, and decomposition that goes beyond what a test file captures
+- **Scope** —TDD specs are function-level; Live Specs cover entire features or workflows
+- **Audience** —TDD tests are written for test runners; Live Specs are written for agents and humans
+- **Richness** —Live Specs include architectural context, rationale, and decomposition that goes beyond what a test file captures
 
-Teams already practicing TDD will find the transition to Spec-Driven Development natural. The discipline of "define the expected behavior first" is the same -- the format and scope expand.
+Teams already practicing TDD will find the transition to Spec-Driven Development natural. The discipline of "define the expected behavior first" is the same —the format and scope expand.
 
 ### Alternative Frameworks
 
 Several frameworks have emerged to structure spec-driven workflows:
 
-- **BMAD Method** -- A comprehensive framework for defining agent tasks with structured prompts and behavioral specifications
-- **GitHub Spec Kit** -- GitHub's approach to structuring specifications for Copilot-driven workflows
-- **Tessl** -- A platform-level approach to spec-driven agent orchestration
+- **BMAD Method** —A comprehensive framework for defining agent tasks with structured prompts and behavioral specifications
+- **GitHub Spec Kit** —GitHub's approach to structuring specifications for Copilot-driven workflows
+- **Tessl** —A platform-level approach to spec-driven agent orchestration
 
 Each takes a different angle, but all share the core principle: agents need structured, machine-readable input to produce reliable output.
 
@@ -164,48 +164,28 @@ Each takes a different angle, but all share the core principle: agents need stru
 
 Adopting spec-driven workflows is not without friction:
 
-- **Perception of lost velocity** -- Writing detailed specs feels slower than "just coding." Teams must internalize that the spec is the work, not overhead before the work.
-- **Maintenance trap** -- Specs that are not kept in sync with the codebase become misleading. Stale specs are worse than no specs because agents follow them faithfully.
-- **Translation gap** -- Business stakeholders think in outcomes; agents need precise technical contracts. Bridging this gap is the Context Architect's core skill.
-- **Context degradation** -- As systems grow, the total context required to spec a change can exceed what fits in a single context window. Modular spec design and RAG-based context retrieval mitigate this.
-- **Semantic ambiguity** -- Natural language is inherently ambiguous. Even well-written specs can be interpreted differently by different agents or model versions. Executable acceptance criteria are the antidote.
+- **Perception of lost velocity** —Writing detailed specs feels slower than "just coding." Teams must internalize that the spec is the work, not overhead before the work.
+- **Maintenance trap** —Specs that are not kept in sync with the codebase become misleading. Stale specs are worse than no specs because agents follow them faithfully.
+- **Translation gap** —Business stakeholders think in outcomes; agents need precise technical contracts. Bridging this gap is the Context Architect's core skill.
+- **Context degradation** —As systems grow, the total context required to spec a change can exceed what fits in a single context window. Modular spec design and RAG-based context retrieval mitigate this.
+- **Semantic ambiguity** —Natural language is inherently ambiguous. Even well-written specs can be interpreted differently by different agents or model versions. Executable acceptance criteria are the antidote.
 
 ### The Live Spec Concept
 
 A Live Spec is not a static document. It is a version-controlled, modular blueprint that evolves alongside the codebase:
 
-- **Version-controlled** -- Specs live in the repository alongside the code they describe, with full Git history
-- **Modular** -- Large features are decomposed into multiple specs that reference each other
-- **Executable** -- Acceptance criteria are written as automated checks, not prose descriptions
-- **Evolving** -- Specs are updated as requirements change, implementation reveals new edge cases, or the system architecture shifts
+- **Version-controlled** —Specs live in the repository alongside the code they describe, with full Git history
+- **Modular** —Large features are decomposed into multiple specs that reference each other
+- **Executable** —Acceptance criteria are written as automated checks, not prose descriptions
+- **Evolving** —Specs are updated as requirements change, implementation reveals new edge cases, or the system architecture shifts
 
 This approach is an evolution of [[prompt-driven-development]], moving from ad-hoc prompts to structured, persistent specifications that accumulate institutional knowledge.
 
 ## The Continuous Development Loop
 
-The Continuous Development Loop (CDL) is the agentic evolution of CI/CD. Where CI/CD automates build, test, and deploy, CDL automates the entire development lifecycle from spec to production.
+These four pillars and Spec-Driven Development come together in the Continuous Development Loop (CDL) — the agentic evolution of CI/CD that automates the entire lifecycle from spec to production. The CDL extends the traditional build-test-deploy pipeline with spec injection, automated context assembly, the Eval Harness as the primary quality gate, and knowledge-centric feedback loops that enrich the Context Index after every execution cycle.
 
-### Mapping CDL Phases to CI/CD
-
-| CDL Phase | CI/CD Equivalent | What Changes |
-|-----------|-----------------|--------------|
-| Spec Injection | Ticket creation / branch start | Machine-readable spec replaces informal ticket |
-| Context Assembly | Developer reads docs / codebase | Agent automatically gathers relevant context from Context Index |
-| Autonomous Execution | Developer writes code | Agent implements in isolated Workbench |
-| Eval Harness | CI test suite | Expanded to include behavioral, security, and architectural checks |
-| Gate Review | Code review / PR approval | Structured automated + HITL gates replace ad-hoc review |
-| Context Update | Knowledge base / docs update | Automatic enrichment of Context Index from execution results |
-| Deployment | CD pipeline | Unchanged -- existing deployment infrastructure works as-is |
-
-### Key Architectural Enhancements
-
-The CDL introduces three capabilities that CI/CD lacks:
-
-1. **Integrated Security** -- Security is not a separate pipeline stage but a continuous check woven into every phase. From spec validation (does this spec introduce security risks?) through execution (does the agent's code pass security scans?) to deployment (are runtime security policies satisfied?).
-
-2. **Eval Harness as the New CI** -- The Eval Harness replaces the traditional CI test suite as the primary quality gate. It includes not just unit and integration tests but also behavioral verification, [[plan-and-execute]] trace validation, and architectural conformance checks.
-
-3. **Knowledge-Centric Feedback Loops** -- Every CDL cycle produces structured feedback that enriches the Context Index. Failed evaluations, operator interventions, and successful patterns all become searchable, reusable knowledge. This is the mechanism that enables continuous improvement in [[llmops]] maturity.
+For a detailed breakdown of CDL phases, their CI/CD equivalents, and key architectural enhancements, see [From Agile to Agentic](/en/handbook/framework/from-agile-to-agentic).
 
 ## Next Steps
 

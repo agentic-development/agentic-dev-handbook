@@ -143,7 +143,7 @@ MCP brings several practical benefits to multi-agent systems:
 
 Multi-agent systems benefit enormously from the same engineering principles that make traditional software maintainable.
 
-### Don't Repeat Yourself (DRY)
+### Do Not Repeat Yourself (DRY)
 
 When multiple agents need the same capability — say, reading a database or calling an API — that capability should exist in one place. In practice, this means:
 
