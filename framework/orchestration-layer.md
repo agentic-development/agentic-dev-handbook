@@ -133,4 +133,4 @@ When implementing the Orchestration Layer, keep these principles in mind:
 
 ## Next Steps
 
-With the Orchestration Layer in place, the next page covers the [Core Pillars and Spec-Driven Development](/en/handbook/framework/five-pillars) that provide the architectural foundation for agentic teams.
+With the Orchestration Layer in place, the next page covers the [Core Pillars](/en/handbook/framework/core-pillars) that provide the architectural foundation for agentic teams.

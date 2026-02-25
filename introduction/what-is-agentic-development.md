@@ -3,7 +3,7 @@ title: "What is Agentic Development?"
 description: "An introduction to AI-assisted software development where AI agents actively participate in the development process"
 authors:
   - dpavancini
-lastUpdated: "2026-02-19"
+lastUpdated: "2026-02-24"
 ---
 
 ## Defining Agentic Development
@@ -37,6 +37,19 @@ Several converging trends make agentic development practical today:
 - **Improved reasoning** enables planning and multi-step execution
 - **Better safety mechanisms** provide appropriate guardrails for autonomous action
 
+## Why It Matters
+
+Teams adopting agentic workflows report significant improvements in:
+
+- **Development velocity** — Routine implementation tasks complete in minutes instead of hours
+- **Code consistency** — AI agents follow established patterns and conventions reliably
+- **Knowledge distribution** — AI agents carry institutional knowledge across the entire team
+- **Onboarding speed** — New team members become productive faster with AI assistance
+
+The real impact is not just faster coding. Agentic development changes the economics of software. When AI handles routine implementation, a team of 3 can deliver what previously required 10. This does not mean fewer jobs — it means more ambitious projects become feasible.
+
+AI agents can enforce coding standards, run tests, check for security vulnerabilities, and ensure documentation stays current — consistently, every time, without fatigue. Developers spend less time on boilerplate and more time on the creative, strategic work that actually differentiates their product: architecture decisions, user experience, and business logic.
+
 ## What This Means for Developers
 
 Agentic development does not replace developers — it amplifies them. Developers shift from writing every line of code to:
@@ -48,4 +61,12 @@ Agentic development does not replace developers — it amplifies them. Developer
 
 The result is faster development cycles, more consistent code quality, and the ability to tackle larger projects with smaller teams.
 
-To see these ideas in practice, explore our [Patterns](/en/patterns) library for proven agentic workflows, or browse [Templates](/en/templates) for ready-to-use prompts.
+## The Adoption Challenge
+
+Despite its benefits, agentic development requires intentional adoption:
+
+- Teams need clear **patterns and workflows** for human-AI collaboration
+- Organizations need **governance frameworks** for AI-generated code
+- Developers need **new skills** in prompt engineering, specification writing, and AI oversight
+
+This handbook exists to help teams navigate these challenges with proven patterns and practical guidance. To see these ideas in practice, explore our [Patterns](/en/patterns) library for proven agentic workflows, or browse [Templates](/en/templates) for ready-to-use prompts.

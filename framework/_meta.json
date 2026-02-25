@@ -1,7 +1,8 @@
 {
   "pages": [
     "orchestration-layer",
-    "five-pillars",
+    "core-pillars",
+    "spec-driven-development",
     "from-agile-to-agentic"
   ]
 }

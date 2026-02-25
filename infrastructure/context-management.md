@@ -93,13 +93,7 @@ Every Live Spec is a package containing four components:
 
 ### The Three Minimum Assets
 
-At a minimum, every spec must contain three assets:
-
-1. **Behavioral Contract** —A precise description of the expected behavior, including inputs, outputs, edge cases, and error handling. This is what the agent implements. The contract should be specific enough that two independent agents, given the same contract, would produce functionally equivalent implementations.
-
-2. **System Constitution** —The constraints that govern how the agent operates for this task. This includes coding standards, architectural patterns, security policies, and any domain-specific rules. The constitution defines the boundaries of acceptable solutions.
-
-3. **Actionable Task Map** —A decomposed, ordered list of implementation steps the agent follows. Each step references the relevant section of the Behavioral Contract and includes its own micro-acceptance criteria. The task map ensures the agent works incrementally and validates each step before proceeding to the next.
+Every spec must contain at least a Behavioral Contract, a System Constitution, and an Actionable Task Map. For full definitions of each asset and how they relate to the spec lifecycle, see [Spec-Driven Development](/en/handbook/framework/spec-driven-development).
 
 ### Version Control and Modularity
 
