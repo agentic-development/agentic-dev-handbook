@@ -1,0 +1,39 @@
+{
+  "chapters": [
+    {
+      "slug": "introduction",
+      "title": "Introdução",
+      "description": "O que é Desenvolvimento Agentic e por que ele é importante"
+    },
+    {
+      "slug": "getting-started",
+      "title": "Primeiros Passos",
+      "description": "Configure seu ambiente e complete seu primeiro fluxo de trabalho agentic"
+    },
+    {
+      "slug": "foundations",
+      "title": "Fundamentos",
+      "description": "O que é AI Agentic e seus blocos de construção"
+    },
+    {
+      "slug": "framework",
+      "title": "O Framework de Desenvolvimento Agentic",
+      "description": "A camada de orquestração, pilares centrais e a evolução do Agile para o Agentic"
+    },
+    {
+      "slug": "team-model",
+      "title": "Modelo de Equipe",
+      "description": "A estrutura de Esquadrão Híbrido e definições de papéis para equipes agentic"
+    },
+    {
+      "slug": "infrastructure",
+      "title": "Infraestrutura Operacional",
+      "description": "O Agent Workbench, gerenciamento de contexto e conjunto de avaliação"
+    },
+    {
+      "slug": "operations",
+      "title": "Operações",
+      "description": "Rotinas de governança, cerimônias e métricas para equipes agentic"
+    }
+  ]
+}

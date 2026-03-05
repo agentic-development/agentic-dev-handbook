@@ -1,0 +1,39 @@
+{
+  "chapters": [
+    {
+      "slug": "introduction",
+      "title": "Introducción",
+      "description": "¿Qué es el Desarrollo Agéntico y por qué es importante?"
+    },
+    {
+      "slug": "getting-started",
+      "title": "Primeros Pasos",
+      "description": "Configure su entorno y complete su primer flujo de trabajo agéntico"
+    },
+    {
+      "slug": "foundations",
+      "title": "Fundamentos",
+      "description": "¿Qué es la AI Agéntica y sus componentes fundamentales?"
+    },
+    {
+      "slug": "framework",
+      "title": "El Framework de Desarrollo Agéntico",
+      "description": "La capa de orquestación, los pilares centrales y la evolución de Agile a Agéntico"
+    },
+    {
+      "slug": "team-model",
+      "title": "Modelo de Equipo",
+      "description": "La estructura de Escuadrón Híbrido y las definiciones de roles para equipos agénticos"
+    },
+    {
+      "slug": "infrastructure",
+      "title": "Infraestructura Operacional",
+      "description": "El Workbench del Agente, la gestión de contexto y el arnés de evaluación"
+    },
+    {
+      "slug": "operations",
+      "title": "Operaciones",
+      "description": "Rutinas de gobernanza, ceremonias y métricas para equipos agénticos"
+    }
+  ]
+}
