@@ -12,19 +12,19 @@ lastUpdated: '2026-02-24'
 
 Esta página describe un ejemplo completo de cómo las rutinas de gobernanza definidas en la página anterior funcionan en conjunto en la práctica. El escenario: un equipo que desarrolla una característica de Recommender System para una plataforma de e-commerce.
 
-## Definición de Epics (Trimestral)
+## Definición de Feature Charter (Trimestral)
 
-Durante la Definición Estratégica de Especificaciones, el Context Architect descompone la iniciativa "Recomendaciones Personalizadas" en tres Epics:
+Durante la Definición Estratégica de Especificaciones, el Context Architect crea tres documentos [[feature-charter]] para la iniciativa "Recomendaciones Personalizadas":
 
 1.  **User Behavior Tracking** — Captura eventos de navegación, búsqueda y compra.
 2.  **Recommendation Engine** — Construye el ML pipeline que produce recomendaciones.
 3.  **Frontend Integration** — Muestra las recomendaciones en la UI del producto.
 
-Cada Epic recibe una Live Spec de alto nivel. El Epic de Recommendation Engine se clasifica como de alto riesgo (arquitectura novedosa, complejidad del ML pipeline) y se configura con HITL gates obligatorios en cada etapa.
+Cada Feature Charter define su visión arquitectónica, mapa de descomposición y configuración de gobernanza. El charter de Recommendation Engine se clasifica como de alto riesgo (arquitectura novedosa, complejidad del ML pipeline) y se configura con HITL gates obligatorios en cada etapa.
 
 ## Tarea de Live Spec (Semanal)
 
-Durante el Bloque de Ingeniería de Especificaciones, el Context Architect produce un Context Packet para la primera tarea en el Epic de User Behavior Tracking: "Implementar la captura de eventos para vistas de página de productos".
+Durante el Bloque de Ingeniería de Especificaciones, el Context Architect produce un Context Packet para la primera Live Spec en el mapa de descomposición del charter User Behavior Tracking: "Implementar la captura de eventos para vistas de página de productos".
 
 El Context Packet incluye:
 
@@ -87,7 +87,7 @@ Este ejemplo ilustra varios principios del framework:
 -   **La calidad del context determina la calidad de la ejecución.** La primera tarea tuvo éxito en la segunda iteración porque el Context Packet era exhaustivo. La segunda tarea requirió una Agent Recovery porque el patrón de comunicación inter-dominio faltaba en el context.
 -   **El Evaluation Harness detecta errores que el agent no puede autodiagnosticar.** Las violaciones arquitectónicas son invisibles para el agent sin restricciones explícitas. Las comprobaciones automatizadas detectaron lo que el agent no pudo.
 -   **Las Agent Recoveries son de diagnóstico, no punitivas.** El operator no reescribió el código — identificó el context faltante, lo inyectó y dejó que el agent completara el trabajo.
--   **El ciclo de vida completo se conecta.** La planificación trimestral definió los epics, la ingeniería de especificaciones semanal produjo los context packets y la ejecución diaria los consumió. Cada cadencia alimenta a la siguiente.
+-   **El ciclo de vida completo se conecta.** La planificación trimestral produjo los Feature Charters, la ingeniería de especificaciones semanal produjo los context packets y la ejecución diaria los consumió. Cada cadencia alimenta a la siguiente.
 
 ## Qué Sigue
 

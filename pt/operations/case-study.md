@@ -12,19 +12,19 @@ lastUpdated: '2026-02-24'
 
 Esta página detalha um exemplo completo de como as rotinas de governança definidas na página anterior funcionam juntas na prática. O cenário: uma equipe construindo um recurso de Recommender System para uma plataforma de e-commerce.
 
-## Definição de Epic (Trimestral)
+## Definição de Feature Charter (Trimestral)
 
-Durante a Definição Estratégica de Especificação, o Context Architect decompõe a iniciativa "Recomendações Personalizadas" em três Epics:
+Durante a Definição Estratégica de Especificação, o Context Architect cria três documentos [[feature-charter]] para a iniciativa "Recomendações Personalizadas":
 
 1. **User Behavior Tracking** — Capturar eventos de navegação, busca e compra.
 2. **Recommendation Engine** — Construir o pipeline de ML que produz as recomendações.
 3. **Frontend Integration** — Exibir as recomendações na UI do produto.
 
-Cada Epic recebe uma Live Spec de alto nível. O Epic Recommendation Engine é classificado como de alto risco (arquitetura inovadora, complexidade do pipeline de ML) e configurado com portões HITL obrigatórios em todas as etapas.
+Cada Feature Charter define sua visão arquitetônica, mapa de decomposição e configuração de governança. O charter do Recommendation Engine é classificado como de alto risco (arquitetura inovadora, complexidade do pipeline de ML) e configurado com portões HITL obrigatórios em todas as etapas.
 
 ## Live Spec Task (Semanal)
 
-Durante o Bloco de Engenharia de Especificação, o Context Architect produz um Context Packet para a primeira tarefa no Epic User Behavior Tracking: "Implementar a captura de eventos para visualizações de página de produto."
+Durante o Bloco de Engenharia de Especificação, o Context Architect produz um Context Packet para o primeiro Live Spec no mapa de decomposição do charter User Behavior Tracking: "Implementar a captura de eventos para visualizações de página de produto."
 
 O Context Packet inclui:
 
@@ -87,7 +87,7 @@ Este exemplo ilustra vários princípios da estrutura:
 - **A qualidade do contexto determina a qualidade da execução.** A primeira tarefa foi bem-sucedida na segunda iteração porque o Context Packet era completo. A segunda tarefa exigiu uma Agent Recovery porque o padrão de comunicação interdomínio estava ausente do contexto.
 - **O Evaluation Harness detecta erros que o agent não consegue autodiagnosticar.** Violações arquiteturais são invisíveis para o agent sem restrições explícitas. Verificações automatizadas detectaram o que o agent não conseguiu.
 - **As Agent Recoveries são diagnósticas, não punitivas.** O operador não reescreveu o código — ele identificou o contexto ausente, injetou-o e deixou o agent concluir o trabalho.
-- **O ciclo de vida completo se conecta.** O planejamento trimestral definiu os epics, a engenharia de especificação semanal produziu os context packets e a execução diária os consumiu. Cada cadência alimenta a próxima.
+- **O ciclo de vida completo se conecta.** O planejamento trimestral produziu os Feature Charters, a engenharia de especificação semanal produziu os context packets e a execução diária os consumiu. Cada cadência alimenta a próxima.
 
 ## O Que Vem a Seguir
 

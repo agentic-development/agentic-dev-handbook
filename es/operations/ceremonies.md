@@ -28,16 +28,16 @@ El reemplazo no es un menor número de ceremonias, sino ceremonias con la cadenc
 
 La rutina de gobernanza de más alto nivel traduce la visión del producto en trabajo ejecutable por máquina. El Context Architect es el responsable de esta ceremonia.
 
-**Propósito:** Descomponer la hoja de ruta del producto en Epics, redactar Live Specs de alto nivel para cada Epic y definir compuertas [[human-in-the-loop]] que determinen qué tareas requieren aprobación humana durante la ejecución.
+**Propósito:** Descomponer la hoja de ruta del producto en documentos [[feature-charter]], definir alcance y visión arquitectónica para cada feature, y configurar compuertas [[human-in-the-loop]] que determinen qué tareas requieren aprobación humana durante la ejecución.
 
 **Actividades:**
 
-1. Revisar la hoja de ruta del producto e identificar los Epics para el próximo trimestre.
-2. Para cada Epic, redactar una Live Spec de alto nivel que capture la intención, el alcance, los criterios de aceptación y las restricciones arquitectónicas.
-3. Asignar niveles de riesgo a cada Epic y configurar las compuertas HITL en consecuencia: los Epics de bajo riesgo pueden fluir con una revisión humana mínima, mientras que los Epics de alto riesgo requieren la aprobación del Agent Operator en cada etapa.
-4. Identificar las dependencias entre Epics y secuenciarlas para minimizar los bloqueos.
+1. Revisar la hoja de ruta del producto y crear Feature Charters para el próximo trimestre.
+2. Para cada Feature Charter, definir alcance, visión arquitectónica y mapa de descomposición con ordenamiento de dependencias.
+3. Asignar niveles de riesgo a cada Feature Charter y configurar las compuertas HITL en consecuencia: los charters de bajo riesgo pueden fluir con una revisión humana mínima, mientras que los charters de alto riesgo requieren la aprobación del Agent Operator en cada etapa.
+4. Identificar las dependencias entre Feature Charters y secuenciarlos para minimizar los bloqueos.
 
-**Salida:** Un backlog de Epics priorizado con borradores de Live Specs y configuraciones de compuertas HITL, listo para la descomposición en trabajo semanal.
+**Salida:** Un backlog de Feature Charters priorizado con mapas de descomposición y configuraciones de compuertas HITL, listo para la ingeniería de especificaciones semanal.
 
 **Equivalente Agile:** Planificación Trimestral / Planificación de PI.
 
@@ -89,7 +89,7 @@ El Context Architect y el Principal Systems Architect colaboran para producir Pa
 
 **Actividades:**
 
-1. Seleccionar las tareas de mayor prioridad del backlog de Epics.
+1. Seleccionar los próximos Live Specs de los mapas de descomposición de los Feature Charters activos.
 2. Para cada tarea, redactar una Live Spec detallada con criterios de aceptación, casos límite y contratos de entrada/salida.
 3. Adjuntar Golden Samples relevantes y restricciones arquitectónicas.
 4. Empaquetar todo en un Paquete de Contexto listo para el consumo del agent.
@@ -213,7 +213,7 @@ La siguiente tabla mapea cada rutina de gobernanza a su frecuencia, propietario,
 
 | Frecuencia | Nombre del Evento | Propietario | Actividad y Propósito | Equivalente Agile |
 | :---- | :---- | :---- | :---- | :---- |
-| Trimestral | Definición Estratégica de Especificaciones | Context Architect | Descomponer la Visión en Epics, redactar Live Specs, establecer compuertas HITL. | Planificación Trimestral |
+| Trimestral | Definición Estratégica de Especificaciones | Context Architect | Descomponer la Visión en Feature Charters, definir mapas de descomposición, establecer compuertas HITL. | Planificación Trimestral |
 | Mensual | Auditoría de Límites y FinOps | Principal Architect / Flow Mgr | Revisar la integridad del dominio y el ROI del compute por característica. | Revisión de Arquitectura / Presupuesto |
 | Semanal | Planificación de Contexto y Asignación | Context Architect | Triar la complejidad de las tareas, dirigir el trabajo, establecer el Presupuesto de Tokens semanal. | Sprint Planning |
 | Semanal | Gobernanza de Arquitectura | Principal Architect | Aprobar diseños antes de que los Agents generen código significativo. | Revisión de Diseño Técnico |
@@ -221,4 +221,4 @@ La siguiente tabla mapea cada rutina de gobernanza a su frecuencia, propietario,
 
 ## Qué Sigue
 
-La siguiente página presenta un estudio de caso completo de principio a fin que muestra cómo estas rutinas funcionan juntas en la práctica, desde la definición trimestral de epics hasta la ejecución diaria del agent, incluyendo una agent recovery. Después de eso, la página final cubre las métricas y los marcos de seguimiento de éxito que miden si estas rutinas realmente están funcionando.
+La siguiente página presenta un estudio de caso completo de principio a fin que muestra cómo estas rutinas funcionan juntas en la práctica, desde la definición trimestral de Feature Charters hasta la ejecución diaria del agent, incluyendo una agent recovery. Después de eso, la página final cubre las métricas y los marcos de seguimiento de éxito que miden si estas rutinas realmente están funcionando.

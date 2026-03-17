@@ -28,16 +28,16 @@ A substituição não é por menos cerimônias — são cerimônias na cadência
 
 A rotina de governança de mais alto nível traduz a visão do produto em trabalho executável por máquina. O Context Architect é o proprietário desta cerimônia.
 
-**Propósito:** Decompor o roadmap do produto em Epics, rascunhar Live Specs de alto nível para cada Epic, e definir portões [[human-in-the-loop]] que determinam quais tarefas exigem aprovação humana durante a execução.
+**Propósito:** Decompor o roadmap do produto em documentos [[feature-charter]], definir escopo e visão arquitetônica para cada feature, e configurar portões [[human-in-the-loop]] que determinam quais tarefas exigem aprovação humana durante a execução.
 
 **Atividades:**
 
-1. Revisar o roadmap do produto e identificar os Epics para o próximo trimestre.
-2. Para cada Epic, rascunhar um Live Spec de alto nível que capture a intenção, escopo, critérios de aceitação e restrições arquitetônicas.
-3. Atribuir níveis de risco a cada Epic e configurar os portões HITL de acordo — Epics de baixo risco podem fluir com revisão humana mínima, enquanto Epics de alto risco exigem aprovação do Agent Operator em cada etapa.
-4. Identificar dependências entre Epics e sequenciá-los para minimizar bloqueios.
+1. Revisar o roadmap do produto e criar Feature Charters para o próximo trimestre.
+2. Para cada Feature Charter, definir escopo, visão arquitetônica e mapa de decomposição com ordenação de dependências.
+3. Atribuir níveis de risco a cada Feature Charter e configurar os portões HITL de acordo — charters de baixo risco podem fluir com revisão humana mínima, enquanto charters de alto risco exigem aprovação do Agent Operator em cada etapa.
+4. Identificar dependências entre Feature Charters e sequenciá-los para minimizar bloqueios.
 
-**Resultado:** Um backlog de Epics priorizado com rascunhos de Live Specs e configurações de portões HITL, pronto para decomposição em trabalho semanal.
+**Resultado:** Um backlog de Feature Charters priorizado com mapas de decomposição e configurações de portões HITL, pronto para a engenharia de especificação semanal.
 
 **Equivalente Agile:** Quarterly Planning / PI Planning.
 
@@ -89,7 +89,7 @@ O Context Architect e o Principal Systems Architect colaboram para produzir Cont
 
 **Atividades:**
 
-1. Selecionar as tarefas de maior prioridade do backlog de Epics.
+1. Selecionar os próximos Live Specs dos mapas de decomposição dos Feature Charters ativos.
 2. Para cada tarefa, rascunhar um Live Spec detalhado com critérios de aceitação, casos de borda e contratos de entrada/saída.
 3. Anexar Golden Samples relevantes e restrições arquitetônicas.
 4. Empacotar tudo em um Context Packet pronto para consumo pelo agent.
@@ -213,7 +213,7 @@ A tabela a seguir mapeia cada rotina de governança para sua frequência, propri
 
 | Frequência | Nome do Evento | Proprietário | Atividade e Propósito | Equivalente Agile |
 | :---- | :---- | :---- | :---- | :---- |
-| Trimestral | Definição Estratégica de Spec | Context Architect | Decompor a Visão em Epics, rascunhar Live Specs, definir portões HITL. | Quarterly Planning |
+| Trimestral | Definição Estratégica de Spec | Context Architect | Decompor a Visão em Feature Charters, definir mapas de decomposição, configurar portões HITL. | Quarterly Planning |
 | Mensal | Boundary Audit e FinOps | Principal Architect / Flow Mgr | Revisar a integridade do domínio e o ROI do compute por funcionalidade. | Architecture / Budget Review |
 | Semanal | Planejamento de Context e Alocação | Context Architect | Triar a complexidade das tarefas, rotear o trabalho, definir o Token Budget semanal. | Sprint Planning |
 | Semanal | Architecture Governance | Principal Architect | Aprovar designs antes que os Agents gerem código significativo. | Tech Design Review |
@@ -221,4 +221,4 @@ A tabela a seguir mapeia cada rotina de governança para sua frequência, propri
 
 ## O Que Vem a Seguir
 
-A próxima página apresenta um estudo de caso completo, de ponta a ponta, mostrando como essas rotinas funcionam juntas na prática — desde a definição trimestral do epic até a execução diária do agent, incluindo uma agent recovery. Depois disso, a página final aborda as métricas e os frameworks de rastreamento de sucesso que medem se essas rotinas estão realmente funcionando.
+A próxima página apresenta um estudo de caso completo, de ponta a ponta, mostrando como essas rotinas funcionam juntas na prática, desde a definição trimestral dos Feature Charters até a execução diária do agent, incluindo uma agent recovery. Depois disso, a página final aborda as métricas e os frameworks de rastreamento de sucesso que medem se essas rotinas estão realmente funcionando.

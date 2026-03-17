@@ -26,16 +26,16 @@ The replacement is not fewer ceremonies — it is ceremonies at the right cadenc
 
 The highest-level governance routine translates product vision into machine-executable work. The Context Architect owns this ceremony.
 
-**Purpose:** Decompose the product roadmap into Epics, draft high-level Live Specs for each Epic, and define [[human-in-the-loop]] gates that determine which tasks require human approval during execution.
+**Purpose:** Decompose the product roadmap into [[feature-charter]] documents, define scope and architectural vision for each feature, and configure [[human-in-the-loop]] gates that determine which tasks require human approval during execution.
 
 **Activities:**
 
-1. Review the product roadmap and identify the Epics for the upcoming quarter.
-2. For each Epic, draft a high-level Live Spec that captures intent, scope, acceptance criteria, and architectural constraints.
-3. Assign risk levels to each Epic and configure HITL gates accordingly — low-risk Epics may flow through with minimal human review, while high-risk Epics require Agent Operator approval at every stage.
-4. Identify dependencies between Epics and sequence them to minimize blocking.
+1. Review the product roadmap and author Feature Charters for the upcoming quarter.
+2. For each Feature Charter, define scope, architectural vision, and decomposition map with dependency ordering.
+3. Assign risk levels to each Feature Charter and configure HITL gates accordingly — low-risk charters may flow through with minimal human review, while high-risk charters require Agent Operator approval at every stage.
+4. Identify dependencies between Feature Charters and sequence them to minimize blocking.
 
-**Output:** A prioritized Epic backlog with draft Live Specs and HITL gate configurations, ready for decomposition into weekly work.
+**Output:** A prioritized Feature Charter backlog with decomposition maps and HITL gate configurations, ready for weekly spec engineering.
 
 **Agile equivalent:** Quarterly Planning / PI Planning.
 
@@ -87,7 +87,7 @@ The Context Architect and Principal Systems Architect collaborate to produce Con
 
 **Activities:**
 
-1. Select the highest-priority tasks from the Epic backlog.
+1. Select the next Live Specs from the active Feature Charter decomposition maps.
 2. For each task, draft a detailed Live Spec with acceptance criteria, edge cases, and input/output contracts.
 3. Attach relevant Golden Samples and architectural constraints.
 4. Package everything into a Context Packet ready for agent consumption.
@@ -211,7 +211,7 @@ The following table maps every governance routine to its frequency, owner, purpo
 
 | Frequency | Event Name | Owner | Activity and Purpose | Agile Equivalent |
 | :---- | :---- | :---- | :---- | :---- |
-| Quarterly | Strategic Spec Definition | Context Architect | Decompose Vision into Epics, draft Live Specs, set HITL gates. | Quarterly Planning |
+| Quarterly | Strategic Spec Definition | Context Architect | Decompose Vision into Feature Charters, define decomposition maps, set HITL gates. | Quarterly Planning |
 | Monthly | Boundary Audit and FinOps | Principal Architect / Flow Mgr | Review domain integrity and compute ROI per feature. | Architecture / Budget Review |
 | Weekly | Context and Allocation Planning | Context Architect | Triage task complexity, route work, set weekly Token Budget. | Sprint Planning |
 | Weekly | Architecture Governance | Principal Architect | Approve designs before Agents generate significant code. | Tech Design Review |
@@ -219,4 +219,4 @@ The following table maps every governance routine to its frequency, owner, purpo
 
 ## What Comes Next
 
-The next page presents a complete end-to-end case study showing how these routines work together in practice — from quarterly epic definition through daily agent execution, including an agent recovery. After that, the final page covers the metrics and success tracking frameworks that measure whether these routines are actually working.
+The next page presents a complete end-to-end case study showing how these routines work together in practice, from quarterly Feature Charter definition through daily agent execution, including an agent recovery. After that, the final page covers the metrics and success tracking frameworks that measure whether these routines are actually working.

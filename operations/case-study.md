@@ -10,19 +10,19 @@ lastUpdated: "2026-02-24"
 
 This page walks through a complete example of how the governance routines defined in the previous page work together in practice. The scenario: a team building a Recommender System feature for an e-commerce platform.
 
-## Epic Definition (Quarterly)
+## Feature Charter Definition (Quarterly)
 
-During Strategic Spec Definition, the Context Architect decomposes the "Personalized Recommendations" initiative into three Epics:
+During Strategic Spec Definition, the Context Architect authors three [[feature-charter]] documents for the "Personalized Recommendations" initiative:
 
 1. **User Behavior Tracking** — Capture browsing, search, and purchase events.
 2. **Recommendation Engine** — Build the ML pipeline that produces recommendations.
 3. **Frontend Integration** — Display recommendations in the product UI.
 
-Each Epic receives a high-level Live Spec. The Recommendation Engine Epic is classified as high-risk (novel architecture, ML pipeline complexity) and configured with mandatory HITL gates at every stage.
+Each Feature Charter defines its architectural vision, decomposition map, and governance configuration. The Recommendation Engine charter is classified as high-risk (novel architecture, ML pipeline complexity) and configured with mandatory HITL gates at every stage.
 
 ## Live Spec Task (Weekly)
 
-During the Specification Engineering Block, the Context Architect produces a Context Packet for the first task in the User Behavior Tracking Epic: "Implement event capture for product page views."
+During the Specification Engineering Block, the Context Architect produces a Context Packet for the first Live Spec in the User Behavior Tracking charter's decomposition map: "Implement event capture for product page views."
 
 The Context Packet includes:
 
@@ -85,7 +85,7 @@ This example illustrates several principles from the framework:
 - **Context quality determines execution quality.** The first task succeeded on the second iteration because the Context Packet was thorough. The second task required an Agent Recovery because the inter-domain communication pattern was missing from context.
 - **The Evaluation Harness catches errors the agent cannot self-diagnose.** Architectural violations are invisible to the agent without explicit constraints. Automated checks caught what the agent could not.
 - **Agent Recoveries are diagnostic, not punitive.** The operator did not rewrite the code — they identified the missing context, injected it, and let the agent complete the work.
-- **The full lifecycle connects.** Quarterly planning defined the epics, weekly specification engineering produced the context packets, and daily execution consumed them. Each cadence feeds into the next.
+- **The full lifecycle connects.** Quarterly planning produced the Feature Charters, weekly specification engineering produced the context packets, and daily execution consumed them. Each cadence feeds into the next.
 
 ## What Comes Next
 
