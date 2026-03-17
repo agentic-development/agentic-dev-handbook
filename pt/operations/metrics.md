@@ -35,7 +35,7 @@ A Razão de Alavancagem do Operador mede o número de sequências de agent conco
 **Progressão-alvo:**
 
 - **Início:** 1:1 — Um agent por operador enquanto a equipe desenvolve habilidades de engenharia de context e estabelece fluxos de trabalho.
-- **Intermediário:** 1:3 a 1:5 — Operadores gerenciam múltiplos agents à medida que as specs melhoram e as missões de resgate se tornam menos frequentes.
+- **Intermediário:** 1:3 a 1:5 — Operadores gerenciam múltiplos agents à medida que as specs melhoram e as agent recoveries se tornam menos frequentes.
 - **Em escala:** 1:5 a 1:10 — Context de alta qualidade, práticas maduras de [[llmops]] e sistemas de avaliação confiáveis permitem que os operadores supervisionem frotas maiores de agents.
 
 Uma razão que se estabiliza abaixo do alvo indica gargalos na qualidade do context, confiabilidade do agent ou throughput de revisão. Investigue qual fator está restringindo a escala.
@@ -49,7 +49,7 @@ A Razão de Correção rastreia com que frequência a intervenção [[human-in-t
 **Interpretação:**
 
 - **Razão baixa (abaixo de 0.1)** — O agent está concluindo tarefas com mínima entrada humana. A qualidade do context e as restrições arquiteturais são eficazes.
-- **Razão moderada (0.1 a 0.3)** — Normal para trabalhos de feature complexos. Algumas missões de resgate são esperadas.
+- **Razão moderada (0.1 a 0.3)** — Normal para trabalhos de feature complexos. Algumas agent recoveries são esperadas.
 - **Razão alta (acima de 0.3)** — O agent requer correção em mais de 30% das tarefas. Isso sinaliza um problema sistêmico: refine as Live Specs, enriqueça o Context Index ou reforce as architectural constraints. O problema está quase sempre nos inputs, não no agent.
 
 Rastreie a Razão de Correção por tipo de tarefa. Uma razão alta para uma categoria (por exemplo, tarefas de migração de banco de dados) com razões baixas em outros lugares aponta para uma lacuna de context específica, em vez de um problema de qualidade geral.

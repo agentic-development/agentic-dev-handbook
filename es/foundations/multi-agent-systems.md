@@ -108,7 +108,7 @@ La lógica de orquestación se define externamente como un grafo de flujo de tra
 
 ## Model Context Protocol (MCP)
 
-A medida que crecen los sistemas de agentes, necesitan interactuar con un número creciente de herramientas, fuentes de datos y servicios externos. El [[mcp|Model Context Protocol (MCP)]] es un estándar abierto introducido por Anthropic para resolver este desafío de interoperabilidad.
+A medida que crecen los sistemas de agentes, necesitan interactuar con un número creciente de herramientas, fuentes de datos y servicios externos. El [[model-context-protocol|Model Context Protocol (MCP)]] es un estándar abierto introducido por Anthropic para resolver este desafío de interoperabilidad.
 
 ### El problema que resuelve MCP
 

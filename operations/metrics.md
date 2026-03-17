@@ -33,7 +33,7 @@ The Operator Leverage Ratio measures the number of concurrent agent sequences a 
 **Target progression:**
 
 - **Starting out:** 1:1 — One agent per operator while the team builds context engineering skills and establishes workflows.
-- **Intermediate:** 1:3 to 1:5 — Operators manage multiple agents as specs improve and rescue missions become less frequent.
+- **Intermediate:** 1:3 to 1:5 — Operators manage multiple agents as specs improve and agent recoveries become less frequent.
 - **At scale:** 1:5 to 1:10 — High-quality context, mature [[llmops]] practices, and reliable evaluation harnesses allow operators to supervise larger agent fleets.
 
 A ratio that plateaus below target indicates bottlenecks in context quality, agent reliability, or review throughput. Investigate which factor is constraining scale.
@@ -47,7 +47,7 @@ The Correction Ratio tracks how frequently [[human-in-the-loop]] intervention is
 **Interpretation:**
 
 - **Low ratio (below 0.1)** — The agent is completing tasks with minimal human input. Context quality and architectural constraints are effective.
-- **Moderate ratio (0.1 to 0.3)** — Normal for complex feature work. Some rescue missions are expected.
+- **Moderate ratio (0.1 to 0.3)** — Normal for complex feature work. Some agent recoveries are expected.
 - **High ratio (above 0.3)** — The agent requires correction on more than 30% of tasks. This signals a systemic issue: refine the Live Specs, enrich the Context Index, or tighten architectural constraints. The problem is almost always in the inputs, not the agent.
 
 Track Correction Ratio per task type. A high ratio for one category (e.g., database migration tasks) with low ratios elsewhere points to a specific context gap rather than a general quality problem.

@@ -70,10 +70,10 @@ Agent Operators are the evolution of the Software Engineer. They do not spend mo
 Core responsibilities:
 
 - **Agent orchestration** — Selecting the right agent for each task, configuring its context window, and setting execution parameters
-- **Rescue missions** — Intervening when an agent gets stuck in a loop, misinterprets a spec, or produces output that fails tests. The Agent Operator diagnoses the failure, provides corrective context, and re-launches.
+- **Agent recoveries** — Intervening when an agent gets stuck in a loop, misinterprets a spec, or produces output that fails tests. The Agent Operator diagnoses the failure, provides corrective context, and re-launches.
 - **Final audits** — Reviewing agent-generated pull requests for correctness, security, and alignment with architectural standards before approving merges
 
-Agent Operators still write code — particularly for critical "Core Nucleus" components where the risk tolerance is zero. But the bulk of their time shifts to review, orchestration, and quality assurance.
+Agent Operators still write code — particularly for critical "Human-Owned Core" components where the risk tolerance is zero. But the bulk of their time shifts to review, orchestration, and quality assurance.
 
 ## The Agent Fleet
 

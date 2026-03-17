@@ -69,7 +69,7 @@ A Live Spec is not a static document. It is a version-controlled, modular bluepr
 - **Executable** — Acceptance criteria are written as automated checks, not prose descriptions
 - **Evolving** — Specs are updated as requirements change, implementation reveals new edge cases, or the system architecture shifts
 
-This approach is an evolution of [[prompt-driven-development]], moving from ad-hoc prompts to structured, persistent specifications that accumulate institutional knowledge.
+This approach is an evolution of prompt-driven development, moving from ad-hoc prompts to structured, persistent specifications that accumulate institutional knowledge.
 
 ## The Continuous Development Loop
 

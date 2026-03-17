@@ -22,6 +22,18 @@ The practical implication: teams that invest in precise specifications, well-str
 
 The Orchestration Layer is built on three specialized roles that form a continuous feedback triangle. Each role has a distinct responsibility and operates at a different level of abstraction.
 
+```mermaid
+flowchart TD
+    CA["Context Architect<br><i>Why & What</i>"]
+    AG["Agent<br><i>How</i><br>&#8596; Escalation & Support"]
+    AO["Agent Operator<br><i>Oversight</i><br>&#8596; Escalation & Support"]
+
+    CA -->|Live Spec| AG
+    AG -->|Completed Work| CA
+    AO -->|Context Update| CA
+    CA ~~~ AO
+```
+
 ### Context Architect
 
 The Context Architect translates business needs into machine-readable specifications called Live Specs. This is the strategic role, concerned with the **Why** and the **What**. The Context Architect owns the problem definition, acceptance criteria, and the overall intent behind each unit of work.
@@ -50,7 +62,7 @@ The Agent Operator provides [[human-in-the-loop]] oversight. This role serves as
 
 Responsibilities include:
 
-- Responding to Blocker Flags from agents ("Rescue Missions")
+- Responding to Blocker Flags from agents ("Agent Recoveries")
 - Debugging agent failures and updating context to prevent recurrence
 - Validating architectural decisions and security implications
 - Enriching the Context Index with lessons learned from interventions
@@ -74,7 +86,7 @@ If all checks pass, the work moves to the Validation Gate. If the agent encounte
 
 ### Phase 3: Context Refinement
 
-When an agent raises a Blocker Flag, the Agent Operator intervenes in what is called a "Rescue Mission." The operator diagnoses the issue, which typically falls into one of these categories:
+When an agent raises a Blocker Flag, the Agent Operator intervenes in what is called an "Agent Recovery." The operator diagnoses the issue, which typically falls into one of these categories:
 
 - **Ambiguous spec** —the intent was unclear or incomplete
 - **Missing context** —the agent lacked information it needed

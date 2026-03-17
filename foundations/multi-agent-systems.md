@@ -106,7 +106,7 @@ The orchestration logic is defined externally as a workflow graph (a DAG or stat
 
 ## Model Context Protocol (MCP)
 
-As agentic systems grow, they need to interact with an increasing number of external tools, data sources, and services. The [[mcp|Model Context Protocol (MCP)]] is an open standard introduced by Anthropic to solve this interoperability challenge.
+As agentic systems grow, they need to interact with an increasing number of external tools, data sources, and services. The [[model-context-protocol|Model Context Protocol (MCP)]] is an open standard introduced by Anthropic to solve this interoperability challenge.
 
 ### The Problem MCP Solves
 

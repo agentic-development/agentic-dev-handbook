@@ -34,13 +34,13 @@ En lugar de luchar contra el cambio, el *Apprentice Model* redefine el desarroll
 En lugar de escribir código directamente, los *juniors* supervisan la ejecución del *agent*. Aprenden realizando las actividades que importan en un equipo *agentic*:
 
 - **Revisión de la salida del agent** — Leer y evaluar el código generado por el *agent* desarrolla habilidades de comprensión de código más rápido que escribir código desde cero. Un *junior* que revisa 20 *agent PRs* al día lee más código en una semana de lo que un *junior* tradicional escribe en un mes.
-- **Ejecución de Rescue Missions** — Diagnosticar por qué un *agent* se atascó enseña la metodología de *debugging* en un entorno de alto volumen. Los *juniors* aprenden a leer *execution traces*, identificar *context gaps* y proporcionar *input* correctivo.
+- **Ejecución de Agent Recoveries** — Diagnosticar por qué un *agent* se atascó enseña la metodología de *debugging* en un entorno de alto volumen. Los *juniors* aprenden a leer *execution traces*, identificar *context gaps* y proporcionar *input* correctivo.
 - **Refinamiento de especificaciones** — Cuando un *agent* produce una salida incorrecta, el *junior* rastrea el fallo hasta la *spec* e identifica lo que faltaba o era ambiguo. Esto desarrolla las habilidades de *specification engineering* que son la capacidad de mayor impacto en un equipo *agentic*.
 
 ### Ruta de aprendizaje estructurada
 
 1. **Mes 1-2:** Trabajar como "sombra" de un *Agent Operator*. Revisar cada *PR* que el *operator* revisa. Aprender el *codebase* leyendo la salida del *agent*, no escribiendo desde cero.
-2. **Mes 3-4:** Asumir la supervisión del *Maintenance Agent*. Las tareas de bajo riesgo proporcionan un entorno seguro para aprender habilidades de *rescue mission*.
+2. **Mes 3-4:** Asumir la supervisión del *Maintenance Agent*. Las tareas de bajo riesgo proporcionan un entorno seguro para aprender habilidades de *agent recovery*.
 3. **Mes 5-6:** Ascender a la supervisión del *Feature Agent* para tareas de baja complejidad. Comenzar a escribir *Context Packets* bajo la tutoría del *Context Architect*.
 4. **Mes 7+:** Responsabilidades completas de *Agent Operator* con autonomía creciente.
 
@@ -52,16 +52,16 @@ Los *juniors* formados en el *Apprentice Model* desarrollan ciertas habilidades 
 
 El *Apprentice Model* no elimina por completo la codificación práctica. Dos prácticas aseguran que los *juniors* sigan desarrollando habilidades de implementación:
 
-- **Trabajo del Core Nucleus** — Las tareas designadas como demasiado importantes o demasiado novedosas para los *agents* se dirigen a los *human engineers*. Los *juniors* se emparejan con los *seniors* en estas tareas, obteniendo experiencia directa de codificación en el trabajo arquitectónicamente más significativo.
+- **Trabajo del Human-Owned Core** — Las tareas designadas como demasiado importantes o demasiado novedosas para los *agents* se dirigen a los *human engineers*. Los *juniors* se emparejan con los *seniors* en estas tareas, obteniendo experiencia directa de codificación en el trabajo arquitectónicamente más significativo.
 - **Sprints de aprendizaje dedicados** — Periódicamente, los *juniors* implementan *features* manualmente que los *agents* normalmente manejarían. El objetivo no es la eficiencia, sino la educación. La implementación del *junior* se compara con la salida del *agent*, creando un *feedback loop* que desarrolla tanto las habilidades de codificación como las de especificación.
 
 ## Medición del desarrollo de talento
 
 Haga un seguimiento de estos indicadores para asegurar que el *Apprentice Model* está funcionando:
 
-- **Tiempo hasta la supervisión independiente** — ¿Cuánto tiempo pasa antes de que un *junior* pueda ejecutar *Rescue Missions* sin supervisión de un *senior*? Objetivo: 3-4 meses.
+- **Tiempo hasta la supervisión independiente** — ¿Cuánto tiempo pasa antes de que un *junior* pueda ejecutar *Agent Recoveries* sin supervisión de un *senior*? Objetivo: 3-4 meses.
 - **Progresión de la calidad de las specs** — Mida el *Spec-to-Code Ratio* en los *Context Packets* escritos por los *juniors* a lo largo del tiempo. Una relación que mejora indica una creciente habilidad en *specification engineering*.
-- **Tasa de éxito de las Rescue Missions** — Realice un seguimiento de si las *Rescue Missions* dirigidas por *juniors* resuelven los bloqueos del *agent* en la primera intervención. Las tasas de mejora indican una creciente habilidad de diagnóstico.
+- **Tasa de éxito de las Agent Recoveries** — Realice un seguimiento de si las *Agent Recoveries* dirigidas por *juniors* resuelven los bloqueos del *agent* en la primera intervención. Las tasas de mejora indican una creciente habilidad de diagnóstico.
 
 ## Próximos pasos
 

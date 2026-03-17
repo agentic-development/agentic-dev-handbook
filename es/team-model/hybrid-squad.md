@@ -72,10 +72,10 @@ Los Operadores de Agentes son la evolución del Software Engineer. No pasan la m
 Responsabilidades clave:
 
 - **Orquestación de agentes (Agent orchestration)** — Seleccionando el agente adecuado para cada tarea, configurando su context window y estableciendo los parámetros de ejecución
-- **Misiones de rescate (Rescue missions)** — Interviniendo cuando un agente se atasca en un loop, malinterpreta una spec o produce output que falla los tests. El Operador de Agentes diagnostica el failure, proporciona corrective context y re-lanza.
+- **Agent recoveries** — Interviniendo cuando un agente se atasca en un loop, malinterpreta una spec o produce output que falla los tests. El Operador de Agentes diagnostica el failure, proporciona corrective context y re-lanza.
 - **Auditorías finales (Final audits)** — Revisando los pull requests generados por agentes para verificar su correctness, security y alignment con los estándares arquitectónicos antes de aprobar los merges
 
-Los Operadores de Agentes todavía escriben código — particularmente para componentes críticos del "Núcleo Central" (Core Nucleus) donde la tolerancia al riesgo es cero. Pero la mayor parte de su tiempo se desplaza a review, orchestration y quality assurance.
+Los Operadores de Agentes todavía escriben código — particularmente para componentes críticos del "Human-Owned Core" donde la tolerancia al riesgo es cero. Pero la mayor parte de su tiempo se desplaza a review, orchestration y quality assurance.
 
 ## La Flota de Agentes
 

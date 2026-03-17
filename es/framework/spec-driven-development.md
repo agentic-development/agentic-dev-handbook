@@ -71,7 +71,7 @@ Una Especificación Viva (Live Spec) no es un documento estático. Es un plano m
 -   **Ejecutable** — Los criterios de aceptación se escriben como verificaciones automatizadas, no como descripciones en prosa.
 -   **Evolutivo** — Las especificaciones se actualizan a medida que los requisitos cambian, la implementación revela nuevos casos extremos o la arquitectura del sistema cambia.
 
-Este enfoque es una evolución del [[prompt-driven-development]], pasando de prompts ad-hoc a especificaciones estructuradas y persistentes que acumulan conocimiento institucional.
+Este enfoque es una evolución del prompt-driven development, pasando de prompts ad-hoc a especificaciones estructuradas y persistentes que acumulan conocimiento institucional.
 
 ## El Ciclo de Desarrollo Continuo
 

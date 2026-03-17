@@ -160,23 +160,23 @@ O Flow Manager lidera uma breve revisão do AgentOps Dashboard — a interface d
 1. Revisar a profundidade da fila: quantas tarefas estão esperando pela execução do agent, e quantas estão em progresso?
 2. Verificar tempos de espera: há alguma tarefa travada esperando por context, revisão ou infraestrutura?
 3. Monitorar taxas de erro: os agents estão falhando em taxas mais altas do que o normal, indicando um problema sistêmico com a qualidade do context ou infraestrutura?
-4. Identificar agents travados — aqueles que excederam os limites de tentativa ou entraram em loops — e atribuir Rescue Missions aos Agent Operators.
+4. Identificar agents travados — aqueles que excederam os limites de tentativa ou entraram em loops — e atribuir Agent Recoveries aos Agent Operators.
 
 **Duração:** 10-15 minutos. Este é um check de status, não um fórum de discussão.
 
-**Resultado:** Uma imagem clara da saúde do pipeline e uma lista de Rescue Missions atribuídas.
+**Resultado:** Uma imagem clara da saúde do pipeline e uma lista de Agent Recoveries atribuídas.
 
-### Execução em Tempo Real: A Rescue Mission
+### Execução em Tempo Real: A Agent Recovery
 
-Quando um agent fica travado — repetindo um teste falho, mal interpretando uma spec ou produzindo uma saída que viola restrições arquitetônicas — um Agent Operator executa uma Rescue Mission.
+Quando um agent fica travado — repetindo um teste falho, mal interpretando uma spec ou produzindo uma saída que viola restrições arquitetônicas — um Agent Operator executa uma Agent Recovery.
 
-**O fluxo de trabalho da Rescue Mission:**
+**O fluxo de trabalho da Agent Recovery:**
 
 1.  **Diagnosticar** — O operator examina a memória de curto prazo do agent: qual context ele recebeu? Que passos ele tomou? Onde ele divergiu do caminho esperado?
 2.  **Injetar** — O operator fornece a peça que falta: uma referência de schema corrigida, uma restrição explícita que o agent ignorou, um esclarecimento de linguagem de spec ambígua. Isso é [[context-engineering]] aplicado em tempo real.
 3.  **Retomar** — O agent retoma a execução com o context injetado e continua em direção à conclusão.
 
-Rescue Missions são a atividade diária de mais alta prioridade. Cada minuto que um agent passa travado é um minuto de compute desperdiçado e throughput do pipeline bloqueado.
+Agent Recoveries são a atividade diária de mais alta prioridade. Cada minuto que um agent passa travado é um minuto de compute desperdiçado e throughput do pipeline bloqueado.
 
 ```mermaid
 sequenceDiagram
@@ -187,7 +187,7 @@ sequenceDiagram
     participant Eval as Evaluation Harness
     FlowMgr->>Dashboard: Review Queue Depth & Error Rates
     Dashboard-->>FlowMgr: Flag: Agent Stuck (Retry Limit Reached)
-    FlowMgr->>Operator: Assign Rescue Mission
+    FlowMgr->>Operator: Assign Agent Recovery
     Operator->>Agent: Analyze Short-Term Memory State
     Operator->>Agent: Inject Missing Schema Context
     Agent->>Eval: Resume Execution & Submit Code
@@ -217,8 +217,8 @@ A tabela a seguir mapeia cada rotina de governança para sua frequência, propri
 | Mensal | Boundary Audit e FinOps | Principal Architect / Flow Mgr | Revisar a integridade do domínio e o ROI do compute por funcionalidade. | Architecture / Budget Review |
 | Semanal | Planejamento de Context e Alocação | Context Architect | Triar a complexidade das tarefas, rotear o trabalho, definir o Token Budget semanal. | Sprint Planning |
 | Semanal | Architecture Governance | Principal Architect | Aprovar designs antes que os Agents gerem código significativo. | Tech Design Review |
-| Diário | Daily Flow Sync | Flow Manager | Identificar Agents travados, atribuir Rescue Missions, desbloquear filas. | Daily Standup |
+| Diário | Daily Flow Sync | Flow Manager | Identificar Agents travados, atribuir Agent Recoveries, desbloquear filas. | Daily Standup |
 
 ## O Que Vem a Seguir
 
-A próxima página apresenta um estudo de caso completo, de ponta a ponta, mostrando como essas rotinas funcionam juntas na prática — desde a definição trimestral do epic até a execução diária do agent, incluindo uma rescue mission. Depois disso, a página final aborda as métricas e os frameworks de rastreamento de sucesso que medem se essas rotinas estão realmente funcionando.
+A próxima página apresenta um estudo de caso completo, de ponta a ponta, mostrando como essas rotinas funcionam juntas na prática — desde a definição trimestral do epic até a execução diária do agent, incluindo uma agent recovery. Depois disso, a página final aborda as métricas e os frameworks de rastreamento de sucesso que medem se essas rotinas estão realmente funcionando.

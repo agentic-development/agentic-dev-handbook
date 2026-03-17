@@ -52,7 +52,7 @@ El Operador de Agent proporciona supervisión [[human-in-the-loop]]. Este rol si
 
 Las responsabilidades incluyen:
 
-- Responder a las Blocker Flags de los agents ("Misiones de Rescate")
+- Responder a las Blocker Flags de los agents ("Agent Recoveries")
 - Depurar fallos del agent y actualizar el context para evitar recurrencias
 - Validar decisiones arquitectónicas e implicaciones de seguridad
 - Enriquecer el Context Index con las lecciones aprendidas de las intervenciones
@@ -76,7 +76,7 @@ Si todas las comprobaciones pasan, el trabajo se mueve a la Validation Gate. Si 
 
 ### Fase 3: Refinamiento del Context
 
-Cuando un agent levanta una Blocker Flag, el Operador de Agent interviene en lo que se denomina una "Misión de Rescate". El operador diagnostica el problema, que típicamente se encuadra en una de estas categorías:
+Cuando un agent levanta una Blocker Flag, el Operador de Agent interviene en lo que se denomina una "Agent Recovery". El operador diagnostica el problema, que típicamente se encuadra en una de estas categorías:
 
 - **Spec ambigua** — la intención no estaba clara o estaba incompleta
 - **Context faltante** — al agent le faltaba información que necesitaba

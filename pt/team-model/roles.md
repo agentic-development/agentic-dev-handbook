@@ -49,9 +49,9 @@ O Agent Operator é o tech lead de alta alavancagem para o swarm de AI. Ele não
 
 ### Funções Principais
 
-- **Desbloquear agentes travados** — Diagnosticar por que um agente entrou em um loop, interpretou mal uma spec ou falhou em produzir testes aprovados. O Agent Operator fornece contexto corretivo, ajusta parâmetros e relança. Esta é a "Missão de Resgate" — a parte mais sensível ao tempo do papel.
+- **Desbloquear agentes travados** — Diagnosticar por que um agente entrou em um loop, interpretou mal uma spec ou falhou em produzir testes aprovados. O Agent Operator fornece contexto corretivo, ajusta parâmetros e relança. Esta é a "Agent Recovery" — a parte mais sensível ao tempo do papel.
 - **Escrever scripts e tooling personalizados** — Construir a automação que conecta agentes ao ambiente de desenvolvimento: servidores MCP personalizados, scripts de injeção de contexto e dashboards de monitoramento.
-- **Escrever código crítico "Core Nucleus"** — Alguns códigos são importantes demais ou arquiteturalmente sensíveis demais para a execução do agente. O Agent Operator escreve esses componentes manualmente — caminhos críticos de segurança, algoritmos centrais e abstrações fundamentais das quais todo o resto depende.
+- **Escrever código crítico "Human-Owned Core"** — Alguns códigos são importantes demais ou arquiteturalmente sensíveis demais para a execução do agente. O Agent Operator escreve esses componentes manualmente — caminhos críticos de segurança, algoritmos centrais e abstrações fundamentais das quais todo o resto depende.
 
 ### Habilidades Essenciais
 

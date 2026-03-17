@@ -35,7 +35,7 @@ La Relación de Apalancamiento del Operador mide el número de secuencias de age
 **Progresión del objetivo:**
 
 - **Comienzo:** 1:1 — Un agent por operador mientras el equipo desarrolla habilidades de ingeniería de contexto y establece flujos de trabajo.
-- **Intermedio:** 1:3 a 1:5 — Los operadores gestionan múltiples agentes a medida que las especificaciones mejoran y las misiones de rescate se vuelven menos frecuentes.
+- **Intermedio:** 1:3 a 1:5 — Los operadores gestionan múltiples agentes a medida que las especificaciones mejoran y las agent recoveries se vuelven menos frecuentes.
 - **A escala:** 1:5 a 1:10 — La alta calidad del contexto, las prácticas maduras de [[llmops]] y los sistemas de evaluación fiables permiten a los operadores supervisar flotas de agentes más grandes.
 
 Una relación que se estanca por debajo del objetivo indica cuellos de botella en la calidad del contexto, la fiabilidad del agent o el rendimiento de la revisión. Investigue qué factor está limitando la escala.
@@ -49,7 +49,7 @@ La Relación de Corrección rastrea con qué frecuencia se requiere la intervenc
 **Interpretación:**
 
 - **Relación baja (por debajo de 0.1)** — El agent está completando tareas con mínima intervención humana. La calidad del contexto y las restricciones arquitectónicas son efectivas.
-- **Relación moderada (0.1 a 0.3)** — Normal para trabajos de características complejas. Se esperan algunas misiones de rescate.
+- **Relación moderada (0.1 a 0.3)** — Normal para trabajos de características complejas. Se esperan algunas agent recoveries.
 - **Relación alta (por encima de 0.3)** — El agent requiere corrección en más del 30% de las tareas. Esto señala un problema sistémico: refine las Especificaciones Vivas, enriquezca el Índice de Contexto o ajuste las restricciones arquitectónicas. El problema casi siempre está en los inputs, no en el agent.
 
 Rastree la Relación de Corrección por tipo de tarea. Una relación alta para una categoría (p. ej., tareas de migración de bases de datos) con relaciones bajas en otros lugares apunta a una brecha de contexto específica en lugar de un problema de calidad general.

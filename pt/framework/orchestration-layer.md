@@ -52,7 +52,7 @@ O **Agent Operator** fornece supervisão [[human-in-the-loop]]. Este papel serve
 
 As responsabilidades incluem:
 
-- Responder a Blocker Flags de **agents** ("Rescue Missions")
+- Responder a Blocker Flags de **agents** ("Agent Recoveries")
 - Debugar falhas de **agent** e atualizar o **context** para prevenir recorrências
 - Validar decisões arquitetônicas e implicações de segurança
 - Enriquecer o **Context** Index com lições aprendidas das intervenções
@@ -76,7 +76,7 @@ Se todas as verificações forem aprovadas, o trabalho passa para o Validation G
 
 ### Fase 3: Refinamento de Context
 
-Quando um **agent** levanta uma Blocker Flag, o **Agent Operator** intervém no que é chamado de "Rescue Mission". O **operator** diagnostica o problema, que geralmente se enquadra em uma dessas categorias:
+Quando um **agent** levanta uma Blocker Flag, o **Agent Operator** intervém no que é chamado de "Agent Recovery". O **operator** diagnostica o problema, que geralmente se enquadra em uma dessas categorias:
 
 - **Spec** ambígua — a intenção era pouco clara ou incompleta
 - **Context** ausente — o **agent** não tinha as informações de que precisava

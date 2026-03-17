@@ -77,7 +77,7 @@ Los agents son tan capaces como las herramientas que pueden invocar. El Enterpri
 El registro contiene herramientas de varias categorías:
 
 -   **API wrappers** —Clientes preconfigurados para servicios internos, APIs de terceros y recursos de proveedores de nube. Cada *wrapper* maneja la autenticación, la limitación de tasas y el manejo de errores para que el agent no tenga que hacerlo.
--   **Integraciones de [[mcp|MCP]]** —Conexiones a servidores de Model Context Protocol que exponen capacidades estructuradas: consultas de bases de datos, operaciones de sistema de archivos, búsqueda y más. MCP proporciona una interfaz estandarizada que los modelos pueden invocar de manera confiable.
+-   **Integraciones de [[model-context-protocol|MCP]]** —Conexiones a servidores de Model Context Protocol que exponen capacidades estructuradas: consultas de bases de datos, operaciones de sistema de archivos, búsqueda y más. MCP proporciona una interfaz estandarizada que los modelos pueden invocar de manera confiable.
 -   **Módulos de *Infrastructure-as-Code*** —Módulos de Terraform, plantillas de CloudFormation y *manifests* de Kubernetes que los agents pueden aplicar a través de rutas de ejecución controladas. Estos módulos están preaprobados y probados, asegurando que los agents aprovisionen infraestructura de manera segura.
 -   **Herramientas de desarrollo** —Linters, formatters, *test runners*, herramientas de *build* y utilidades de análisis estático. Estas son las mismas herramientas que usan sus ingenieros humanos, empaquetadas para la invocación de agents.
 -   **Herramientas de observabilidad** —*Log queriers*, *dashboards* de métricas y exploradores de *traces* que los agents pueden usar para diagnosticar problemas y validar su propio trabajo.

@@ -72,10 +72,10 @@ Os Agent Operators são a evolução do Software Engineer. Eles não passam a ma
 Responsabilidades principais:
 
 - **Orquestração de agents** — Selecionar o agent certo para cada tarefa, configurar sua context window e definir parâmetros de execução
-- **Missões de resgate** — Intervir quando um agent fica preso em um loop, interpreta mal uma spec ou produz uma saída que falha nos testes. O Agent Operator diagnostica a falha, fornece context corretivo e relança.
+- **Agent recoveries** — Intervir quando um agent fica preso em um loop, interpreta mal uma spec ou produz uma saída que falha nos testes. O Agent Operator diagnostica a falha, fornece context corretivo e relança.
 - **Auditorias finais** — Revisar pull requests gerados por agents para correção, segurança e alinhamento com os padrões arquitetônicos antes de aprovar os merges
 
-Os Agent Operators ainda escrevem código — particularmente para componentes críticos do "Core Nucleus" onde a tolerância a risco é zero. Mas a maior parte do tempo deles se volta para revisão, orquestração e garantia de qualidade.
+Os Agent Operators ainda escrevem código — particularmente para componentes críticos do "Human-Owned Core" onde a tolerância a risco é zero. Mas a maior parte do tempo deles se volta para revisão, orquestração e garantia de qualidade.
 
 ## A Agent Fleet
 

@@ -108,7 +108,7 @@ A lógica de orquestração é definida externamente como um grafo de fluxo de t
 
 ## Model Context Protocol (MCP)
 
-À medida que os sistemas de agent crescem, eles precisam interagir com um número crescente de ferramentas externas, fontes de dados e serviços. O [[mcp|Model Context Protocol (MCP)]] é um padrão aberto introduzido pela Anthropic para resolver esse desafio de interoperabilidade.
+À medida que os sistemas de agent crescem, eles precisam interagir com um número crescente de ferramentas externas, fontes de dados e serviços. O [[model-context-protocol|Model Context Protocol (MCP)]] é um padrão aberto introduzido pela Anthropic para resolver esse desafio de interoperabilidade.
 
 ### O Problema que o MCP Resolve
 

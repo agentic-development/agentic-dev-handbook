@@ -71,7 +71,7 @@ Uma Live Spec não é um documento estático. É um blueprint modular, versionad
 -   **Executável** — Os critérios de aceitação são escritos como verificações automatizadas, não como descrições em prosa
 -   **Em Evolução** — As specs são atualizadas conforme os requisitos mudam, a implementação revela novos edge cases, ou a arquitetura do sistema se altera
 
-Esta abordagem é uma evolução do [[prompt-driven-development]], movendo de prompts ad-hoc para especificações estruturadas e persistentes que acumulam conhecimento institucional.
+Esta abordagem é uma evolução do prompt-driven development, movendo de prompts ad-hoc para especificações estruturadas e persistentes que acumulam conhecimento institucional.
 
 ## O Ciclo de Desenvolvimento Contínuo
 

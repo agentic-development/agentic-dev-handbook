@@ -62,7 +62,7 @@ The agent produces an initial implementation. The Evaluation Harness runs automa
 
 The agent iterates: it fixes the null user-agent handling, corrects the `source` field format, and resubmits. All tests pass.
 
-## Rescue Mission
+## Agent Recovery
 
 On the second task — "Implement search query event capture" — the agent gets stuck. It attempts to import a module from the recommendation engine domain, violating the bounded context boundary. The Evaluation Harness flags an architectural violation, but the agent cannot resolve it because it lacks context about the correct inter-domain communication pattern.
 
@@ -76,15 +76,15 @@ The Agent Operator intervenes:
 
 The Agent Operator reviews the final PR. The code follows the Golden Sample patterns, passes all automated tests, and respects architectural boundaries. The PR is approved and merged. The Flow Manager updates the AgentOps Dashboard, marking the task complete and logging the token consumption against the weekly budget.
 
-Total elapsed time from Context Packet to merged PR: 47 minutes for two tasks, including one Rescue Mission. The equivalent work would have taken a human developer approximately 1.5-2 days.
+Total elapsed time from Context Packet to merged PR: 47 minutes for two tasks, including one Agent Recovery. The equivalent work would have taken a human developer approximately 1.5-2 days.
 
 ## Key Takeaways
 
 This example illustrates several principles from the framework:
 
-- **Context quality determines execution quality.** The first task succeeded on the second iteration because the Context Packet was thorough. The second task required a Rescue Mission because the inter-domain communication pattern was missing from context.
+- **Context quality determines execution quality.** The first task succeeded on the second iteration because the Context Packet was thorough. The second task required an Agent Recovery because the inter-domain communication pattern was missing from context.
 - **The Evaluation Harness catches errors the agent cannot self-diagnose.** Architectural violations are invisible to the agent without explicit constraints. Automated checks caught what the agent could not.
-- **Rescue Missions are diagnostic, not punitive.** The operator did not rewrite the code — they identified the missing context, injected it, and let the agent complete the work.
+- **Agent Recoveries are diagnostic, not punitive.** The operator did not rewrite the code — they identified the missing context, injected it, and let the agent complete the work.
 - **The full lifecycle connects.** Quarterly planning defined the epics, weekly specification engineering produced the context packets, and daily execution consumed them. Each cadence feeds into the next.
 
 ## What Comes Next

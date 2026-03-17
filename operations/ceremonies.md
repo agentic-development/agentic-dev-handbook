@@ -158,23 +158,23 @@ The Flow Manager leads a brief review of the AgentOps Dashboard — the real-tim
 1. Review queue depth: how many tasks are waiting for agent execution, and how many are in progress?
 2. Check wait times: are any tasks stalled waiting for context, review, or infrastructure?
 3. Monitor error rates: are agents failing at higher rates than normal, indicating a systemic issue with context quality or infrastructure?
-4. Identify stuck agents — those that have exceeded retry limits or entered loops — and assign Rescue Missions to Agent Operators.
+4. Identify stuck agents — those that have exceeded retry limits or entered loops — and assign Agent Recoveries to Agent Operators.
 
 **Duration:** 10-15 minutes. This is a status check, not a discussion forum.
 
-**Output:** A clear picture of pipeline health and a list of assigned Rescue Missions.
+**Output:** A clear picture of pipeline health and a list of assigned Agent Recoveries.
 
-### Real-Time Execution: The Rescue Mission
+### Real-Time Execution: The Agent Recovery
 
-When an agent gets stuck — looping on a failing test, misinterpreting a spec, or producing output that violates architectural constraints — an Agent Operator executes a Rescue Mission.
+When an agent gets stuck — looping on a failing test, misinterpreting a spec, or producing output that violates architectural constraints — an Agent Operator executes an Agent Recovery.
 
-**The Rescue Mission workflow:**
+**The Agent Recovery workflow:**
 
 1. **Diagnose** — The operator examines the agent's short-term memory: what context did it receive? What steps did it take? Where did it diverge from the expected path?
 2. **Inject** — The operator provides the missing piece: a corrected schema reference, an explicit constraint the agent overlooked, a clarification of ambiguous spec language. This is [[context-engineering]] applied in real time.
 3. **Resume** — The agent resumes execution with the injected context and continues toward completion.
 
-Rescue Missions are the highest-priority daily activity. Every minute an agent spends stuck is a minute of wasted compute and blocked pipeline throughput.
+Agent Recoveries are the highest-priority daily activity. Every minute an agent spends stuck is a minute of wasted compute and blocked pipeline throughput.
 
 ```mermaid
 sequenceDiagram
@@ -185,7 +185,7 @@ sequenceDiagram
     participant Eval as Evaluation Harness
     FlowMgr->>Dashboard: Review Queue Depth & Error Rates
     Dashboard-->>FlowMgr: Flag: Agent Stuck (Retry Limit Reached)
-    FlowMgr->>Operator: Assign Rescue Mission
+    FlowMgr->>Operator: Assign Agent Recovery
     Operator->>Agent: Analyze Short-Term Memory State
     Operator->>Agent: Inject Missing Schema Context
     Agent->>Eval: Resume Execution & Submit Code
@@ -215,8 +215,8 @@ The following table maps every governance routine to its frequency, owner, purpo
 | Monthly | Boundary Audit and FinOps | Principal Architect / Flow Mgr | Review domain integrity and compute ROI per feature. | Architecture / Budget Review |
 | Weekly | Context and Allocation Planning | Context Architect | Triage task complexity, route work, set weekly Token Budget. | Sprint Planning |
 | Weekly | Architecture Governance | Principal Architect | Approve designs before Agents generate significant code. | Tech Design Review |
-| Daily | Daily Flow Sync | Flow Manager | Identify stuck Agents, assign Rescue Missions, unblock queues. | Daily Standup |
+| Daily | Daily Flow Sync | Flow Manager | Identify stuck Agents, assign Agent Recoveries, unblock queues. | Daily Standup |
 
 ## What Comes Next
 
-The next page presents a complete end-to-end case study showing how these routines work together in practice — from quarterly epic definition through daily agent execution, including a rescue mission. After that, the final page covers the metrics and success tracking frameworks that measure whether these routines are actually working.
+The next page presents a complete end-to-end case study showing how these routines work together in practice — from quarterly epic definition through daily agent execution, including an agent recovery. After that, the final page covers the metrics and success tracking frameworks that measure whether these routines are actually working.

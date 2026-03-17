@@ -49,9 +49,9 @@ El Agent Operator es el líder técnico de alto apalancamiento para el enjambre 
 
 ### Deberes Principales
 
-- **Desbloqueo de *agents* atascados** — Diagnosticar por qué un *agent* entró en un bucle, malinterpretó una especificación o no logró producir pruebas exitosas. El Agent Operator proporciona *context* correctivo, ajusta parámetros y relanza. Esta es la "Misión de Rescate" — la parte más sensible al tiempo del rol.
+- **Desbloqueo de *agents* atascados** — Diagnosticar por qué un *agent* entró en un bucle, malinterpretó una especificación o no logró producir pruebas exitosas. El Agent Operator proporciona *context* correctivo, ajusta parámetros y relanza. Esta es la "Agent Recovery" — la parte más sensible al tiempo del rol.
 - **Escritura de *scripts* y herramientas personalizados** — Construir la automatización que conecta los *agents* al entorno de desarrollo: servidores MCP personalizados, *scripts* de inyección de *context* y *monitoring dashboards*.
-- **Escritura de código crítico de "Core Nucleus"** — Algunos códigos son demasiado importantes o arquitectónicamente sensibles para la ejecución del *agent*. El Agent Operator escribe estos componentes a mano — rutas críticas de seguridad, algoritmos centrales y abstracciones fundamentales de las que todo lo demás depende.
+- **Escritura de código crítico de "Human-Owned Core"** — Algunos códigos son demasiado importantes o arquitectónicamente sensibles para la ejecución del *agent*. El Agent Operator escribe estos componentes a mano — rutas críticas de seguridad, algoritmos centrales y abstracciones fundamentales de las que todo lo demás depende.
 
 ### Habilidades Clave
 

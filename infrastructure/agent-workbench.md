@@ -75,7 +75,7 @@ Agents are only as capable as the tools they can invoke. The Enterprise Tool Reg
 The registry contains tools across several categories:
 
 - **API wrappers** —Pre-configured clients for internal services, third-party APIs, and cloud provider resources. Each wrapper handles authentication, rate limiting, and error handling so the agent does not need to.
-- **[[mcp|MCP]] integrations** —Connections to Model Context Protocol servers that expose structured capabilities: database queries, file system operations, search, and more. MCP provides a standardized interface that models can invoke reliably.
+- **[[model-context-protocol|MCP]] integrations** —Connections to Model Context Protocol servers that expose structured capabilities: database queries, file system operations, search, and more. MCP provides a standardized interface that models can invoke reliably.
 - **Infrastructure-as-Code modules** —Terraform modules, CloudFormation templates, and Kubernetes manifests that agents can apply through controlled execution paths. These modules are pre-approved and tested, ensuring agents provision infrastructure safely.
 - **Development tools** —Linters, formatters, test runners, build tools, and static analysis utilities. These are the same tools your human engineers use, packaged for agent invocation.
 - **Observability tools** —Log queriers, metric dashboards, and trace explorers that agents can use to diagnose issues and validate their own work.

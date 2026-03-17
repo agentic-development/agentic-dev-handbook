@@ -32,13 +32,13 @@ Rather than fighting the shift, the Apprentice Model redefines junior developmen
 Instead of writing code directly, juniors supervise agent execution. They learn by doing the activities that matter in an agentic team:
 
 - **Reviewing agent output** — Reading and evaluating agent-generated code builds code comprehension skills faster than writing code from scratch. A junior reviewing 20 agent PRs per day reads more code in a week than a traditional junior writes in a month.
-- **Executing Rescue Missions** — Diagnosing why an agent got stuck teaches debugging methodology in a high-volume environment. Juniors learn to read execution traces, identify context gaps, and provide corrective input.
+- **Executing Agent Recoveries** — Diagnosing why an agent got stuck teaches debugging methodology in a high-volume environment. Juniors learn to read execution traces, identify context gaps, and provide corrective input.
 - **Refining specifications** — When an agent produces incorrect output, the junior traces the failure back to the spec and identifies what was missing or ambiguous. This builds the specification engineering skills that are the highest-leverage capability in an agentic team.
 
 ### Structured Learning Path
 
 1. **Month 1-2:** Shadow an Agent Operator. Review every PR the operator reviews. Learn the codebase by reading agent output, not by writing from scratch.
-2. **Month 3-4:** Take ownership of Maintenance Agent supervision. Low-risk tasks provide a safe environment to learn rescue mission skills.
+2. **Month 3-4:** Take ownership of Maintenance Agent supervision. Low-risk tasks provide a safe environment to learn agent recovery skills.
 3. **Month 5-6:** Graduate to Feature Agent supervision for low-complexity tasks. Begin writing Context Packets under the Context Architect's mentorship.
 4. **Month 7+:** Full Agent Operator responsibilities with increasing autonomy.
 
@@ -50,16 +50,16 @@ Juniors trained in the Apprentice Model develop certain skills faster than their
 
 The Apprentice Model does not eliminate hands-on coding entirely. Two practices ensure juniors still build implementation skills:
 
-- **Core Nucleus work** — Tasks designated as too important or too novel for agents are routed to human engineers. Juniors pair with seniors on these tasks, gaining direct coding experience on the most architecturally significant work.
+- **Human-Owned Core work** — Tasks designated as too important or too novel for agents are routed to human engineers. Juniors pair with seniors on these tasks, gaining direct coding experience on the most architecturally significant work.
 - **Dedicated learning sprints** — Periodically, juniors implement features manually that agents would normally handle. The goal is not efficiency but education. The junior's implementation is compared against the agent's output, creating a feedback loop that builds both coding and specification skills.
 
 ## Measuring Talent Development
 
 Track these indicators to ensure the Apprentice Model is working:
 
-- **Time to independent supervision** — How long before a junior can run Rescue Missions without senior oversight? Target: 3-4 months.
+- **Time to independent supervision** — How long before a junior can run Agent Recoveries without senior oversight? Target: 3-4 months.
 - **Spec quality progression** — Measure the Spec-to-Code Ratio on Context Packets written by juniors over time. An improving ratio indicates growing specification engineering skill.
-- **Rescue Mission success rate** — Track whether junior-led Rescue Missions resolve agent blockers on the first intervention. Improving rates indicate growing diagnostic skill.
+- **Agent Recovery success rate** — Track whether junior-led Agent Recoveries resolve agent blockers on the first intervention. Improving rates indicate growing diagnostic skill.
 
 ## What Comes Next
 

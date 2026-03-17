@@ -64,7 +64,7 @@ O agent produz uma implementação inicial. O Evaluation Harness executa testes 
 
 O agent itera: corrige o tratamento de user-agent nulo, corrige o formato do campo `source` e reenviou. Todos os testes passam.
 
-## Rescue Mission
+## Agent Recovery
 
 Na segunda tarefa — "Implementar a captura de eventos de consulta de busca" — o agent trava. Ele tenta importar um módulo do domínio do recommendation engine, violando o limite de contexto delimitado. O Evaluation Harness sinaliza uma violação arquitetural, mas o agent não consegue resolvê-la porque não possui contexto sobre o padrão correto de comunicação interdomínio.
 
@@ -78,15 +78,15 @@ O Agent Operator intervém:
 
 O Agent Operator revisa o pull request final. O código segue os padrões do Golden Sample, passa em todos os testes automatizados e respeita os limites arquiteturais. O pull request é aprovado e mergeado. O Flow Manager atualiza o AgentOps Dashboard, marcando a tarefa como concluída e registrando o consumo de token em relação ao orçamento semanal.
 
-Tempo total decorrido do Context Packet para o pull request mergeado: 47 minutos para duas tarefas, incluindo uma Rescue Mission. O trabalho equivalente teria levado um desenvolvedor humano aproximadamente 1,5 a 2 dias.
+Tempo total decorrido do Context Packet para o pull request mergeado: 47 minutos para duas tarefas, incluindo uma Agent Recovery. O trabalho equivalente teria levado um desenvolvedor humano aproximadamente 1,5 a 2 dias.
 
 ## Principais Aprendizados
 
 Este exemplo ilustra vários princípios da estrutura:
 
-- **A qualidade do contexto determina a qualidade da execução.** A primeira tarefa foi bem-sucedida na segunda iteração porque o Context Packet era completo. A segunda tarefa exigiu uma Rescue Mission porque o padrão de comunicação interdomínio estava ausente do contexto.
+- **A qualidade do contexto determina a qualidade da execução.** A primeira tarefa foi bem-sucedida na segunda iteração porque o Context Packet era completo. A segunda tarefa exigiu uma Agent Recovery porque o padrão de comunicação interdomínio estava ausente do contexto.
 - **O Evaluation Harness detecta erros que o agent não consegue autodiagnosticar.** Violações arquiteturais são invisíveis para o agent sem restrições explícitas. Verificações automatizadas detectaram o que o agent não conseguiu.
-- **As Rescue Missions são diagnósticas, não punitivas.** O operador não reescreveu o código — ele identificou o contexto ausente, injetou-o e deixou o agent concluir o trabalho.
+- **As Agent Recoveries são diagnósticas, não punitivas.** O operador não reescreveu o código — ele identificou o contexto ausente, injetou-o e deixou o agent concluir o trabalho.
 - **O ciclo de vida completo se conecta.** O planejamento trimestral definiu os epics, a engenharia de especificação semanal produziu os context packets e a execução diária os consumiu. Cada cadência alimenta a próxima.
 
 ## O Que Vem a Seguir

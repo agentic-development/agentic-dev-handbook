@@ -77,7 +77,7 @@ Agents são tão capazes quanto as ferramentas que podem invocar. O Enterprise T
 O registry contém ferramentas de várias categorias:
 
 - **API wrappers** — Clientes pré-configurados para serviços internos, third-party APIs e recursos de provedores de nuvem. Cada wrapper lida com autenticação, rate limiting e tratamento de erros para que o agent não precise fazê-lo.
-- **Integrações [[mcp|MCP]]** — Conexões a servidores Model Context Protocol que expõem capacidades estruturadas: database queries, file system operations, search e muito mais. O MCP fornece uma interface padronizada que os models podem invocar de forma confiável.
+- **Integrações [[model-context-protocol|MCP]]** — Conexões a servidores Model Context Protocol que expõem capacidades estruturadas: database queries, file system operations, search e muito mais. O MCP fornece uma interface padronizada que os models podem invocar de forma confiável.
 - **Módulos Infrastructure-as-Code** — Módulos Terraform, templates CloudFormation e manifests Kubernetes que os agents podem aplicar através de caminhos de execução controlados. Esses módulos são pré-aprovados e testados, garantindo que os agents provisionem a infraestrutura com segurança.
 - **Development tools** — Linters, formatters, test runners, build tools e utilities de static analysis. Estas são as mesmas ferramentas que seus engenheiros humanos usam, empacotadas para invocação de agent.
 - **Observability tools** — Log queriers, metric dashboards e trace explorers que os agents podem usar para diagnosticar problemas e validar seu próprio trabalho.

@@ -160,23 +160,23 @@ El Flow Manager lidera una breve revisión del Panel de Control de AgentOps, la 
 1. Revisar la profundidad de la cola: ¿cuántas tareas están esperando la ejecución del agent y cuántas están en curso?
 2. Verificar los tiempos de espera: ¿alguna tarea está detenida esperando contexto, revisión o infraestructura?
 3. Monitorear las tasas de error: ¿los agents están fallando a tasas más altas de lo normal, indicando un problema sistémico con la calidad del contexto o la infraestructura?
-4. Identificar agents atascados, aquellos que han excedido los límites de reintento o han entrado en bucles, y asignar Misiones de Rescate a los Agent Operators.
+4. Identificar agents atascados, aquellos que han excedido los límites de reintento o han entrado en bucles, y asignar Agent Recoveries a los Agent Operators.
 
 **Duración:** 10-15 minutos. Esto es una verificación de estado, no un foro de discusión.
 
-**Salida:** Una imagen clara de la salud del pipeline y una lista de Misiones de Rescate asignadas.
+**Salida:** Una imagen clara de la salud del pipeline y una lista de Agent Recoveries asignadas.
 
-### Ejecución en Tiempo Real: La Misión de Rescate
+### Ejecución en Tiempo Real: La Agent Recovery
 
-Cuando un agent se atasca, entrando en un bucle por una prueba fallida, malinterpretando una especificación o produciendo una salida que viola las restricciones arquitectónicas, un Agent Operator ejecuta una Misión de Rescate.
+Cuando un agent se atasca, entrando en un bucle por una prueba fallida, malinterpretando una especificación o produciendo una salida que viola las restricciones arquitectónicas, un Agent Operator ejecuta una Agent Recovery.
 
-**El flujo de trabajo de la Misión de Rescate:**
+**El flujo de trabajo de la Agent Recovery:**
 
 1. **Diagnosticar** — El operador examina la memoria a corto plazo del agent: ¿qué contexto recibió? ¿Qué pasos tomó? ¿Dónde se desvió del camino esperado?
 2. **Inyectar** — El operador proporciona la pieza faltante: una referencia de esquema corregida, una restricción explícita que el agent pasó por alto, una aclaración del lenguaje ambiguo de la especificación. Esto es [[context-engineering]] aplicado en tiempo real.
 3. **Reanudar** — El agent reanuda la ejecución con el contexto inyectado y continúa hasta su finalización.
 
-Las Misiones de Rescate son la actividad diaria de mayor prioridad. Cada minuto que un agent pasa atascado es un minuto de compute desperdiciado y rendimiento del pipeline bloqueado.
+Las Agent Recoveries son la actividad diaria de mayor prioridad. Cada minuto que un agent pasa atascado es un minuto de compute desperdiciado y rendimiento del pipeline bloqueado.
 
 ```mermaid
 sequenceDiagram
@@ -187,7 +187,7 @@ sequenceDiagram
     participant Eval as Evaluation Harness
     FlowMgr->>Dashboard: Revisar Profundidad de Cola y Tasas de Error
     Dashboard-->>FlowMgr: Marcar: Agent Atascado (Límite de Reintentos Alcanzado)
-    FlowMgr->>Operator: Asignar Misión de Rescate
+    FlowMgr->>Operator: Asignar Agent Recovery
     Operator->>Agent: Analizar Estado de Memoria a Corto Plazo
     Operator->>Agent: Inyectar Contexto de Esquema Faltante
     Agent->>Eval: Reanudar Ejecución y Enviar Código
@@ -217,8 +217,8 @@ La siguiente tabla mapea cada rutina de gobernanza a su frecuencia, propietario,
 | Mensual | Auditoría de Límites y FinOps | Principal Architect / Flow Mgr | Revisar la integridad del dominio y el ROI del compute por característica. | Revisión de Arquitectura / Presupuesto |
 | Semanal | Planificación de Contexto y Asignación | Context Architect | Triar la complejidad de las tareas, dirigir el trabajo, establecer el Presupuesto de Tokens semanal. | Sprint Planning |
 | Semanal | Gobernanza de Arquitectura | Principal Architect | Aprobar diseños antes de que los Agents generen código significativo. | Revisión de Diseño Técnico |
-| Diario | Sincronización Diaria de Flujo | Flow Manager | Identificar Agents atascados, asignar Misiones de Rescate, desbloquear colas. | Daily Standup |
+| Diario | Sincronización Diaria de Flujo | Flow Manager | Identificar Agents atascados, asignar Agent Recoveries, desbloquear colas. | Daily Standup |
 
 ## Qué Sigue
 
-La siguiente página presenta un estudio de caso completo de principio a fin que muestra cómo estas rutinas funcionan juntas en la práctica, desde la definición trimestral de epics hasta la ejecución diaria del agent, incluyendo una misión de rescate. Después de eso, la página final cubre las métricas y los marcos de seguimiento de éxito que miden si estas rutinas realmente están funcionando.
+La siguiente página presenta un estudio de caso completo de principio a fin que muestra cómo estas rutinas funcionan juntas en la práctica, desde la definición trimestral de epics hasta la ejecución diaria del agent, incluyendo una agent recovery. Después de eso, la página final cubre las métricas y los marcos de seguimiento de éxito que miden si estas rutinas realmente están funcionando.

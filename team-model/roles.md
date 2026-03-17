@@ -47,9 +47,9 @@ The Agent Operator is the high-leverage technical lead for the AI swarm. They do
 
 ### Core Duties
 
-- **Unblocking stuck agents** — Diagnosing why an agent entered a loop, misinterpreted a spec, or failed to produce passing tests. The Agent Operator provides corrective context, adjusts parameters, and re-launches. This is the "Rescue Mission" — the most time-sensitive part of the role.
+- **Unblocking stuck agents** — Diagnosing why an agent entered a loop, misinterpreted a spec, or failed to produce passing tests. The Agent Operator provides corrective context, adjusts parameters, and re-launches. This is the "Agent Recovery" — the most time-sensitive part of the role.
 - **Writing custom scripts and tooling** — Building the automation that connects agents to the development environment: custom MCP servers, context injection scripts, and monitoring dashboards.
-- **Writing critical "Core Nucleus" code** — Some code is too important or too architecturally sensitive for agent execution. The Agent Operator writes these components by hand — security-critical paths, core algorithms, and foundational abstractions that everything else depends on.
+- **Writing critical "Human-Owned Core" code** — Some code is too important or too architecturally sensitive for agent execution. The Agent Operator writes these components by hand — security-critical paths, core algorithms, and foundational abstractions that everything else depends on.
 
 ### Key Skills
 
